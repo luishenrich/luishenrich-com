@@ -200,10 +200,53 @@ a {
 }
 
 .prose img {
-  border-radius: 8px;
-  margin: 2rem 0;
+  border-radius: 10px;
+  margin: 2.5rem 0;
   max-width: 100%;
   height: auto;
+  border: 1px solid var(--border);
+}
+
+/* Image break-out: images render wider than the text column on larger viewports */
+.prose p:has(> img:only-child) {
+  margin: 2.5rem 0;
+}
+
+.prose p:has(> img:only-child) > img {
+  margin: 0;
+  width: 100%;
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .prose p:has(> img:only-child) {
+    margin-left: -3rem;
+    margin-right: -3rem;
+    width: calc(100% + 6rem);
+    max-width: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .prose p:has(> img:only-child) {
+    margin-left: -5rem;
+    margin-right: -5rem;
+    width: calc(100% + 10rem);
+  }
+}
+
+/* Italic line directly after an image renders as a caption */
+.prose p:has(> img:only-child) + p > em:only-child {
+  display: block;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-style: normal;
+}
+
+.prose p:has(> img:only-child) + p:has(> em:only-child) {
+  margin-top: -1.5rem;
+  margin-bottom: 2.5rem;
 }
 
 .prose figure {

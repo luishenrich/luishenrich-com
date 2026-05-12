@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostMeta } from "@/lib/posts";
 import { formatDate } from "@/lib/format";
+import { ReadingProgress } from "@/components/ReadingProgress";
 
 export const dynamicParams = false;
 
@@ -36,23 +37,26 @@ export default async function BlogPostPage({
   const { default: Post } = await import(`@/content/blog/${slug}.mdx`);
 
   return (
-    <article className="mx-auto max-w-[680px] px-6 sm:px-12 pb-24">
-      <header className="mb-12">
-        <time className="text-[13px] font-mono text-text-muted block mb-4 tabular-nums">
-          {formatDate(meta.date)} · {meta.readingTime}
-        </time>
-        <h1 className="text-3xl sm:text-4xl font-semibold tracking-[-0.02em] leading-[1.15]">
-          {meta.title}
-        </h1>
-        {meta.description && (
-          <p className="text-text-secondary mt-4 text-lg">
-            {meta.description}
-          </p>
-        )}
-      </header>
-      <div className="prose">
-        <Post />
-      </div>
-    </article>
+    <>
+      <ReadingProgress />
+      <article className="mx-auto max-w-[760px] px-6 sm:px-12 pb-24">
+        <header className="mb-14">
+          <time className="text-[13px] font-mono text-text-muted block mb-5 tabular-nums">
+            {formatDate(meta.date)} · {meta.readingTime}
+          </time>
+          <h1 className="text-3xl sm:text-[2.625rem] font-semibold tracking-[-0.025em] leading-[1.1]">
+            {meta.title}
+          </h1>
+          {meta.description && (
+            <p className="text-text-secondary mt-5 text-lg leading-[1.55]">
+              {meta.description}
+            </p>
+          )}
+        </header>
+        <div className="prose">
+          <Post />
+        </div>
+      </article>
+    </>
   );
 }
