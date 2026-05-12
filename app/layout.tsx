@@ -75,7 +75,7 @@ export default function RootLayout({
               </li>
               <li>
                 <a
-                  href="https://x.com/kinglhb03"
+                  href="https://x.com/luisnhenrich"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-accent transition-colors"
