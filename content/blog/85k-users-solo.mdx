@@ -53,11 +53,11 @@ So I built a two-stage extraction pipeline. The first stage is expensive: a reas
 
 *One extraction. Every feature reuses it.*
 
-Here's what that actually looks like in the product:
+That's the engineering view. The reason the structure earns its keep isn't in the diagram — it's what a user sees on the other side of it. Not a JSON blob, but a study guide that already knows what's in their document and where every idea lives. Here's one from a Bayesian inference PDF a student uploaded last week:
 
 ![A real StudyGuide on Bayesian inference, showing extracted topics and concepts with page references back to the source document](/blog/85k-users-solo/studyguide.png)
 
-*A real StudyGuide on Bayesian inference. Each top-level entry is a **topic**; each bold heading is a **concept** extracted from the source document, complete with page references. Every other feature — flashcards, practice exams, mind maps — is generated on top of this same structure.*
+*Each top-level entry is a topic; each bold heading is a concept, with the page it came from. Flashcards, practice exams, and mind maps are all generated from this same tree.*
 
 This was supposed to be a quality fix. It turned out to be a cost fix too. The deep analysis happens once, and then cheaper models reuse the structured output for every feature. Every new feature I ship — and there are a lot of them — plugs into the same topic-and-concept graph. The expensive reasoning model runs once per document, not once per feature.
 
