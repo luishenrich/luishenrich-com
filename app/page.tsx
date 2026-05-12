@@ -79,7 +79,7 @@ export default async function Home() {
         <ul className="space-y-3">
           <li>
             <a
-              href="https://x.com/luishenrich"
+              href="https://x.com/kinglhb03"
               target="_blank"
               rel="noopener noreferrer"
               className="text-text-secondary hover:text-accent transition-colors"
