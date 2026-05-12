@@ -79,12 +79,22 @@ export default async function Home() {
         <ul className="space-y-3">
           <li>
             <a
-              href="https://twitter.com/"
+              href="https://x.com/luishenrich"
               target="_blank"
               rel="noopener noreferrer"
               className="text-text-secondary hover:text-accent transition-colors"
             >
-              Twitter / X
+              X / Twitter
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/luishenrich/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-text-secondary hover:text-accent transition-colors"
+            >
+              LinkedIn
             </a>
           </li>
           <li>

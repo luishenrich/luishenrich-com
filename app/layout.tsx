@@ -60,7 +60,39 @@ export default function RootLayout({
         </header>
         <main>{children}</main>
         <footer className="mx-auto max-w-[720px] px-6 sm:px-12 py-12 mt-24 text-sm text-text-muted border-t border-border">
-          © {new Date().getFullYear()} Luis Henrich-Bandis
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <span>© {new Date().getFullYear()} Luis Henrich-Bandis</span>
+            <ul className="flex gap-5">
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/luishenrich/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-accent transition-colors"
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://x.com/luishenrich"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-accent transition-colors"
+                >
+                  X
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:hi@luishenrich.com"
+                  className="hover:text-accent transition-colors"
+                >
+                  Email
+                </a>
+              </li>
+            </ul>
+          </div>
         </footer>
       </body>
     </html>
