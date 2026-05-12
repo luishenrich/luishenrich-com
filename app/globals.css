@@ -235,18 +235,21 @@ a {
   }
 }
 
-/* Italic line directly after an image renders as a caption */
-.prose p:has(> img:only-child) + p > em:only-child {
-  display: block;
-  text-align: center;
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  font-style: normal;
+/* An italic-only paragraph is a figure caption (typically following an image) */
+.prose p:has(> em:only-child) {
+  margin-top: -1rem;
+  margin-bottom: 2.75rem;
 }
 
-.prose p:has(> img:only-child) + p:has(> em:only-child) {
-  margin-top: -1.5rem;
-  margin-bottom: 2.5rem;
+.prose p > em:only-child {
+  display: block;
+  text-align: center;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  font-style: normal;
+  max-width: 540px;
+  margin: 0 auto;
 }
 
 .prose figure {
