@@ -1,65 +1,112 @@
-import Image from "next/image";
+import Link from "next/link";
+import { getAllPosts } from "@/lib/posts";
+import { formatDate } from "@/lib/format";
 
-export default function Home() {
+export default async function Home() {
+  const posts = (await getAllPosts()).slice(0, 5);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+    <div className="mx-auto max-w-[720px] px-6 sm:px-12 pb-24">
+      <section className="mb-20">
+        <h1 className="text-3xl sm:text-4xl font-semibold tracking-[-0.02em] leading-[1.15] mb-6 flex items-baseline gap-3">
+          Luis Henrich-Bandis
+          <span
+            aria-hidden
+            className="inline-block w-2 h-2 rounded-full bg-accent translate-y-[-2px]"
+          />
+        </h1>
+        <p className="text-text-secondary">
+          I&rsquo;m a 22-year-old solo founder of{" "}
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href="https://studypdf.com"
             target="_blank"
             rel="noopener noreferrer"
+            className="text-text-primary border-b border-border hover:border-accent transition-colors"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
+            StudyPDF
           </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+          , used by 85,000 students to learn from their documents with AI.
+          I&rsquo;m also finishing my Master&rsquo;s at RWTH Aachen.
+        </p>
+        <p className="text-text-secondary mt-8">
+          I write here about building products solo, the strange dual life of
+          running a company while still in school, and occasional notes on
+          engineering and machine learning.
+        </p>
+      </section>
+
+      <section className="mb-20">
+        <h2 className="text-xs uppercase tracking-[0.14em] text-text-muted font-medium mb-8">
+          Writing
+        </h2>
+        {posts.length === 0 ? (
+          <p className="text-text-muted text-[15px]">Coming soon.</p>
+        ) : (
+          <ul className="space-y-5">
+            {posts.map((post) => (
+              <li key={post.slug}>
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="group flex flex-col sm:flex-row sm:items-baseline sm:gap-6"
+                >
+                  <time className="text-[13px] font-mono text-text-muted shrink-0 sm:w-28 tabular-nums">
+                    {formatDate(post.date)}
+                  </time>
+                  <span className="text-text-primary group-hover:text-accent transition-colors">
+                    {post.title}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        )}
+        {posts.length > 0 && (
+          <div className="mt-8">
+            <Link
+              href="/blog"
+              className="text-sm text-accent hover:opacity-80 transition-opacity"
+            >
+              All posts →
+            </Link>
+          </div>
+        )}
+      </section>
+
+      <section>
+        <h2 className="text-xs uppercase tracking-[0.14em] text-text-muted font-medium mb-8">
+          Elsewhere
+        </h2>
+        <ul className="space-y-3">
+          <li>
+            <a
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-text-secondary hover:text-accent transition-colors"
+            >
+              Twitter / X
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-text-secondary hover:text-accent transition-colors"
+            >
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a
+              href="mailto:hi@luishenrich.com"
+              className="text-text-secondary hover:text-accent transition-colors"
+            >
+              hi@luishenrich.com
+            </a>
+          </li>
+        </ul>
+      </section>
     </div>
   );
 }

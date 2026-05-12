@@ -1,0 +1,58 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { getAllPosts, getPostMeta } from "@/lib/posts";
+import { formatDate } from "@/lib/format";
+
+export const dynamicParams = false;
+
+export async function generateStaticParams() {
+  const posts = await getAllPosts();
+  return posts.map((p) => ({ slug: p.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const meta = await getPostMeta(slug);
+  if (!meta) return {};
+  return {
+    title: meta.title,
+    description: meta.description,
+  };
+}
+
+export default async function BlogPostPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const meta = await getPostMeta(slug);
+  if (!meta) notFound();
+
+  const { default: Post } = await import(`@/content/blog/${slug}.mdx`);
+
+  return (
+    <article className="mx-auto max-w-[680px] px-6 sm:px-12 pb-24">
+      <header className="mb-12">
+        <time className="text-[13px] font-mono text-text-muted block mb-4 tabular-nums">
+          {formatDate(meta.date)} · {meta.readingTime}
+        </time>
+        <h1 className="text-3xl sm:text-4xl font-semibold tracking-[-0.02em] leading-[1.15]">
+          {meta.title}
+        </h1>
+        {meta.description && (
+          <p className="text-text-secondary mt-4 text-lg">
+            {meta.description}
+          </p>
+        )}
+      </header>
+      <div className="prose">
+        <Post />
+      </div>
+    </article>
+  );
+}
