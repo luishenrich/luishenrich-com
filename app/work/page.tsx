@@ -25,7 +25,8 @@ const stack = [
   "Anthropic API",
   "OpenAI API",
   "Cloudflare R2",
-  "Vercel",
+  "Monorepo",
+  "Self-hosted",
   "Claude Code",
 ];
 
