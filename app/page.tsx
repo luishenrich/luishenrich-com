@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
 import { formatDate } from "@/lib/format";
+import now from "@/content/now.json";
 
 export default async function Home() {
   const posts = (await getAllPosts()).slice(0, 5);
@@ -16,23 +17,43 @@ export default async function Home() {
           />
         </h1>
         <p className="text-text-secondary">
-          I&rsquo;m a 22-year-old solo founder of{" "}
+          I&rsquo;m Luis. 22, Master&rsquo;s at RWTH Aachen, building{" "}
           <a
-            href="https://studypdf.com"
+            href="https://studypdf.net"
             target="_blank"
             rel="noopener noreferrer"
             className="text-text-primary border-b border-border hover:border-accent transition-colors"
           >
             StudyPDF
-          </a>
-          , used by 85,000 students to learn from their documents with AI.
-          I&rsquo;m also finishing my Master&rsquo;s at RWTH Aachen.
+          </a>{" "}
+          alone from Cologne — 85,000 users, $1.5k MRR, 200+ universities,
+          one engineer.
         </p>
         <p className="text-text-secondary mt-8">
-          I write here about building products solo, the strange dual life of
-          running a company while still in school, and occasional notes on
-          engineering and machine learning.
+          I write here when something&rsquo;s actually worth writing about —
+          solo founding, applied AI, what Claude Code can and can&rsquo;t do.
+          Usually something I learned the hard way.
         </p>
+      </section>
+
+      <section className="mb-20">
+        <h2 className="text-xs uppercase tracking-[0.14em] text-text-muted font-medium mb-6">
+          Currently
+        </h2>
+        <ul className="space-y-3">
+          {now.items.map((item, i) => (
+            <li
+              key={i}
+              className="text-text-secondary flex gap-3 items-baseline"
+            >
+              <span
+                aria-hidden
+                className="inline-block w-1 h-1 rounded-full bg-text-muted shrink-0 translate-y-[-3px]"
+              />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
       </section>
 
       <section className="mb-20">
@@ -99,7 +120,7 @@ export default async function Home() {
           </li>
           <li>
             <a
-              href="https://github.com/"
+              href="https://github.com/luishenrich"
               target="_blank"
               rel="noopener noreferrer"
               className="text-text-secondary hover:text-accent transition-colors"
