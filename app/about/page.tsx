@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Luis Henrich-Bandis — 22, solo founder of StudyPDF (85,000 users), Master's student at RWTH Aachen.",
+    "Luis Henrich-Bandis. 22, solo founder of StudyPDF (85,000 users), Master's student at RWTH Aachen.",
 };
 
 export default function About() {
@@ -46,23 +46,22 @@ export default function About() {
           .
         </p>
         <p className="text-text-secondary">
-          We started it in summer 2023 — a friend, his exam prep, and ChatGPT
+          We started it in summer 2023. A friend, his exam prep, and ChatGPT
           failing at PDFs in spectacularly stupid ways. I built the first
           version in three weeks. Two years later it&rsquo;s at 85,000 users
           across 200+ universities, ~$1.5k MRR, around 600 daily actives, 150k+
-          documents processed, and I run it solo from Cologne. I do all of it
-          — the AI pipeline, the infra, the support emails, the SEO posts,
-          the late-night bug that turned out to be a vector store leaking
-          across users while I was on holiday in Madeira. Obviously not
-          everything works the first time. You learn by breaking things in
-          production.
+          documents processed, and I run it solo from Cologne. I do all of it:
+          the AI pipeline, the infra, the support emails, the SEO posts, the
+          late-night bug that turned out to be a vector store leaking across
+          users while I was on holiday in Madeira. Obviously not everything
+          works the first time. You learn by breaking things in production.
         </p>
         <p className="text-text-secondary">
           Most of the interesting work has been on the AI side. The product
           runs on a two-stage extraction pipeline: an expensive reasoning
           model reads the document once, extracts topics and concepts, and
-          every other feature — flashcards, practice questions, mind maps,
-          the chat layer — is generated against that same tree. Cost goes
+          every other feature (flashcards, practice questions, mind maps,
+          the chat layer) is generated against that same tree. Cost goes
           down, quality goes up. I wrote the long version{" "}
           <Link
             href="/blog/85k-users-solo"
@@ -73,8 +72,8 @@ export default function About() {
           .
         </p>
         <p className="text-text-secondary">
-          I write here when something is actually worth writing about —
-          usually something I learned the hard way. Running a company while
+          I write here when something is actually worth writing about.
+          Usually something I learned the hard way. Running a company while
           still in school, using Claude Code as a small team, multi-agent
           pipelines that hold up at exam-season load. No content calendar, no
           thread bait. Six honest posts a year is fine.
@@ -86,8 +85,8 @@ export default function About() {
           Currently
         </h2>
         <p className="text-text-secondary">
-          Open to AI Deployment / Forward Deployed Engineer conversations —
-          happy to chat.
+          Open to AI Deployment / Forward Deployed Engineer conversations.
+          Happy to chat.
         </p>
       </section>
 

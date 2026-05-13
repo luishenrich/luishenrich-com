@@ -1,7 +1,7 @@
 import { ogContentType, ogSize, renderOgImage } from "@/lib/og";
 
 export const runtime = "edge";
-export const alt = "Work — Luis Henrich-Bandis";
+export const alt = "Work · Luis Henrich-Bandis";
 export const size = ogSize;
 export const contentType = ogContentType;
 

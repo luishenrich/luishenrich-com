@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://luishenrich.com"),
   title: {
     default: "Luis Henrich-Bandis",
-    template: "%s — Luis Henrich-Bandis",
+    template: "%s · Luis Henrich-Bandis",
   },
   description:
     "Solo founder of StudyPDF. Master's student at RWTH Aachen. Notes on building products, engineering, and machine learning.",

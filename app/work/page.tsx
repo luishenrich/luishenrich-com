@@ -87,7 +87,7 @@ export default function Work() {
               <span className="text-text-primary">topics</span>, and within
               each topic, the{" "}
               <span className="text-text-primary">concepts</span> that are
-              discussed, applied, or explained — each tied back to the source
+              discussed, applied, or explained, each tied back to the source
               page. Every downstream feature (flashcards, practice exams, mind
               maps, chat) is generated against that same tree, using
               embeddings of the relevant concept chunks for retrieval. The
@@ -128,10 +128,10 @@ export default function Work() {
               My role
             </h3>
             <p className="text-text-secondary">
-              Solo. I built and run all of it — the AI pipeline, the backend,
+              Solo. I built and run all of it. The AI pipeline, the backend,
               the database, storage, auth, the growth side, the support
               inbox. Between March and December 2025, Moritz Kindler was
-              co-founder and ran the UI/UX and brand work — what you see in
+              co-founder and ran the UI/UX and brand work. What you see in
               the product today is largely his visual identity. We ended
               things cleanly when the logistics stopped working, and
               I&rsquo;ve been running it alone again since January 2026.
