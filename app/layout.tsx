@@ -40,6 +40,11 @@ export const metadata: Metadata = {
     description:
       "Solo founder of StudyPDF. Master's student at RWTH Aachen.",
   },
+  alternates: {
+    types: {
+      "application/rss+xml": "/rss.xml",
+    },
+  },
 };
 
 export default function RootLayout({

@@ -3,11 +3,41 @@ import { getAllPosts } from "@/lib/posts";
 import { formatDate } from "@/lib/format";
 import now from "@/content/now.json";
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Luis Henrich-Bandis",
+  givenName: "Luis",
+  familyName: "Henrich-Bandis",
+  url: "https://luishenrich.com",
+  email: "hi@luishenrich.com",
+  jobTitle: "Solo Founder",
+  worksFor: {
+    "@type": "Organization",
+    name: "StudyPDF",
+    url: "https://studypdf.net",
+  },
+  alumniOf: {
+    "@type": "EducationalOrganization",
+    name: "RWTH Aachen University",
+    url: "https://www.rwth-aachen.de/",
+  },
+  sameAs: [
+    "https://www.linkedin.com/in/luishenrich/",
+    "https://x.com/luisnhenrich",
+    "https://github.com/luishenrich",
+  ],
+};
+
 export default async function Home() {
   const posts = (await getAllPosts()).slice(0, 5);
 
   return (
     <div className="mx-auto max-w-[720px] px-6 sm:px-12 pb-24">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
       <section className="mb-20">
         <h1 className="text-3xl sm:text-4xl font-semibold tracking-[-0.02em] leading-[1.15] mb-6 flex items-baseline gap-3">
           Luis Henrich-Bandis
