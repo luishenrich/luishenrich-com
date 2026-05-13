@@ -59,7 +59,7 @@ export default function RootLayout({
         <header className="mx-auto max-w-[720px] px-6 sm:px-12 pt-10 pb-16 flex items-center justify-between gap-4">
           <Link
             href="/"
-            className="text-sm font-medium text-text-primary hover:text-accent transition-colors"
+            className="text-[12px] sm:text-[13px] font-medium uppercase tracking-[0.1em] sm:tracking-[0.16em] text-text-primary hover:text-accent transition-colors whitespace-nowrap"
           >
             Luis Henrich-Bandis
           </Link>
