@@ -87,27 +87,22 @@ export default function About() {
         </p>
       </section>
 
-      {/*
-        TODO: CV download. Once public/Luis_Henrich-Bandis_CV.pdf exists,
-        uncomment this block.
-
-        <section className="mb-16">
-          <h2 className="text-xs uppercase tracking-[0.14em] text-text-muted font-medium mb-4">
-            CV
-          </h2>
-          <a
-            href="/Luis_Henrich-Bandis_CV.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent hover:opacity-80 transition-opacity"
-          >
-            Download PDF ↓
-          </a>
-          <p className="text-[13px] font-mono text-text-muted mt-2">
-            Last updated May 2026
-          </p>
-        </section>
-      */}
+      <section className="mb-16">
+        <h2 className="text-xs uppercase tracking-[0.14em] text-text-muted font-medium mb-4">
+          CV
+        </h2>
+        <a
+          href="/docs/CV.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-accent hover:opacity-80 transition-opacity"
+        >
+          Download PDF ↓
+        </a>
+        <p className="text-[13px] font-mono text-text-muted mt-2">
+          Last updated May 2026
+        </p>
+      </section>
 
       <section>
         <h2 className="text-xs uppercase tracking-[0.14em] text-text-muted font-medium mb-8">
