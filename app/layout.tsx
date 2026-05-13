@@ -51,13 +51,33 @@ export default function RootLayout({
       className={`${inter.variable} ${jetbrainsMono.variable}`}
     >
       <body>
-        <header className="mx-auto max-w-[720px] px-6 sm:px-12 pt-10 pb-16">
+        <header className="mx-auto max-w-[720px] px-6 sm:px-12 pt-10 pb-16 flex items-center justify-between gap-4">
           <Link
             href="/"
             className="text-sm font-medium text-text-primary hover:text-accent transition-colors"
           >
             Luis Henrich-Bandis
           </Link>
+          <nav className="flex items-center gap-4 sm:gap-5 text-[13px] text-text-secondary">
+            <Link
+              href="/about"
+              className="hover:text-text-primary transition-colors"
+            >
+              About
+            </Link>
+            <Link
+              href="/work"
+              className="hover:text-text-primary transition-colors"
+            >
+              Work
+            </Link>
+            <Link
+              href="/blog"
+              className="hover:text-text-primary transition-colors"
+            >
+              Writing
+            </Link>
+          </nav>
         </header>
         <main>{children}</main>
         <footer className="mx-auto max-w-[720px] px-6 sm:px-12 py-12 mt-24 text-sm text-text-muted border-t border-border">
