@@ -1,8 +1,11 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import readingTime from "reading-time";
+import GithubSlugger from "github-slugger";
 
 const POSTS_DIR = path.join(process.cwd(), "content/blog");
+
+export type Heading = { id: string; text: string };
 
 export type PostMeta = {
   slug: string;
@@ -47,6 +50,33 @@ export async function getPostMeta(slug: string): Promise<PostMeta | null> {
     };
   } catch {
     return null;
+  }
+}
+
+export async function getPostHeadings(slug: string): Promise<Heading[]> {
+  try {
+    const raw = await fs.readFile(
+      path.join(POSTS_DIR, `${slug}.mdx`),
+      "utf8",
+    );
+    const slugger = new GithubSlugger();
+    const headings: Heading[] = [];
+    let inCodeBlock = false;
+    for (const line of raw.split("\n")) {
+      if (line.startsWith("```")) {
+        inCodeBlock = !inCodeBlock;
+        continue;
+      }
+      if (inCodeBlock) continue;
+      const match = line.match(/^##\s+(.+?)\s*$/);
+      if (match) {
+        const text = match[1].replace(/[*_`]/g, "").trim();
+        headings.push({ id: slugger.slug(text), text });
+      }
+    }
+    return headings;
+  } catch {
+    return [];
   }
 }
 

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getAllPosts, getPostMeta } from "@/lib/posts";
+import { getAllPosts, getPostHeadings, getPostMeta } from "@/lib/posts";
 import { formatDate } from "@/lib/format";
 import { ReadingProgress } from "@/components/ReadingProgress";
+import { TableOfContents } from "@/components/TableOfContents";
 
 export const dynamicParams = false;
 
@@ -34,11 +35,13 @@ export default async function BlogPostPage({
   const meta = await getPostMeta(slug);
   if (!meta) notFound();
 
+  const headings = await getPostHeadings(slug);
   const { default: Post } = await import(`@/content/blog/${slug}.mdx`);
 
   return (
     <>
       <ReadingProgress />
+      <TableOfContents headings={headings} />
       <article className="mx-auto max-w-[760px] px-6 sm:px-12 pb-24">
         <header className="mb-14">
           <time className="text-[13px] font-mono text-text-muted block mb-5 tabular-nums">

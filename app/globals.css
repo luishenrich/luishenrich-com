@@ -41,6 +41,12 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+.prose h2,
+.prose h3 {
+  scroll-margin-top: 2.5rem;
 }
 
 body {
