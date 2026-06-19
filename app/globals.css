@@ -10,17 +10,8 @@
   --code-bg: #f5f5f5;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0a0a0a;
-    --text-primary: #fafafa;
-    --text-secondary: #a3a3a3;
-    --text-muted: #737373;
-    --border: #262626;
-    --accent: #3b82f6;
-    --code-bg: #171717;
-  }
-}
+/* Light mode only: the brand assets, charts, and product stills are all
+   light, so the whole site stays light regardless of the visitor's OS theme. */
 
 @theme inline {
   --color-bg: var(--bg);
@@ -35,6 +26,7 @@
 }
 
 html {
+  color-scheme: light;
   background: var(--bg);
   color: var(--text-primary);
   font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -316,11 +308,4 @@ a {
 .prose code[data-theme*=" "],
 .prose code[data-theme*=" "] span {
   color: var(--shiki-light);
-}
-
-@media (prefers-color-scheme: dark) {
-  .prose code[data-theme*=" "],
-  .prose code[data-theme*=" "] span {
-    color: var(--shiki-dark);
-  }
 }

@@ -1,0 +1,35 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="'Nunito', system-ui, sans-serif">
+  <rect x="0" y="0" width="800" height="500" rx="24" fill="#F7F4E3"/>
+
+  <!-- title -->
+  <text x="48" y="52" font-family="'Fraunces', Georgia, serif" font-size="30" fill="#251F1A">Make one artifact, and you come back</text>
+  <text x="48" y="76" font-size="15" fill="#251F1A" fill-opacity="0.55">Week-1 return rate, by whether a student created a study artifact in week one</text>
+
+  <!-- baseline -->
+  <line x1="70" y1="400" x2="770" y2="400" stroke="#251F1A" stroke-opacity="0.15" stroke-width="1"/>
+
+  <!-- bars: scale 25% -> 300px, baseline y=400 -->
+  <!-- Creators 22.4% -> h 268.8, top 131.2 -->
+  <rect x="140" y="131.2" width="130" height="268.8" rx="8" fill="#FFBC14"/>
+  <text x="205" y="116" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="34" fill="#251F1A">22.4%</text>
+  <text x="205" y="424" text-anchor="middle" font-size="15" fill="#251F1A" font-weight="600">Artifact creators</text>
+  <text x="205" y="444" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.5">n = 893</text>
+
+  <!-- All signups 9.1% -> h 109.2, top 290.8 (muted) -->
+  <rect x="335" y="290.8" width="130" height="109.2" rx="8" fill="#251F1A" fill-opacity="0.18"/>
+  <text x="400" y="276" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="26" fill="#251F1A" fill-opacity="0.6">9.1%</text>
+  <text x="400" y="424" text-anchor="middle" font-size="15" fill="#251F1A" fill-opacity="0.6">All signups</text>
+  <text x="400" y="444" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.4">n = 3,180</text>
+
+  <!-- Non-creators 3.9% -> h 46.8, top 353.2 -->
+  <rect x="530" y="353.2" width="130" height="46.8" rx="8" fill="#EF4444" fill-opacity="0.8"/>
+  <text x="595" y="338" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="26" fill="#251F1A">3.9%</text>
+  <text x="595" y="424" text-anchor="middle" font-size="15" fill="#251F1A" font-weight="600">Non-creators</text>
+  <text x="595" y="444" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.5">n = 2,287</text>
+
+  <!-- multiplier callout -->
+  <text x="205" y="200" text-anchor="middle" font-size="15" fill="#1D4B3A" font-weight="700">5.7×</text>
+
+  <!-- footnote -->
+  <text x="48" y="482" font-size="12.5" fill="#251F1A" fill-opacity="0.5">Stricter measure (came back and generated something): 12.4% vs 1.2%. Cohort: signups Jun 1 to 11, 2026.</text>
+</svg>

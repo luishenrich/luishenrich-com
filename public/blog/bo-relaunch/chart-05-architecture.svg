@@ -1,0 +1,78 @@
+<svg viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="'Nunito', system-ui, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#251F1A" fill-opacity="0.55"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1D4B3A"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="560" rx="24" fill="#F7F4E3"/>
+
+  <text x="48" y="50" font-family="'Fraunces', Georgia, serif" font-size="30" fill="#251F1A">One deep read. Every study tool reuses it.</text>
+  <text x="48" y="74" font-size="15" fill="#251F1A" fill-opacity="0.55">The expensive analysis happens once, in the middle. Everything downstream is cheap.</text>
+
+  <!-- flow arrows -->
+  <line x1="152" y1="210" x2="182" y2="210" stroke="#251F1A" stroke-opacity="0.55" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="318" y1="210" x2="347" y2="210" stroke="#251F1A" stroke-opacity="0.55" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="522" y1="210" x2="557" y2="210" stroke="#251F1A" stroke-opacity="0.55" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <!-- A: upload -->
+  <rect x="32" y="178" width="120" height="64" rx="12" fill="#FBF9EF" stroke="#251F1A" stroke-opacity="0.15"/>
+  <text x="92" y="206" text-anchor="middle" font-size="14.5" fill="#251F1A" font-weight="600">Upload</text>
+  <text x="92" y="225" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.55">PDF / slides</text>
+
+  <!-- B: OCR + figures -->
+  <rect x="185" y="178" width="133" height="64" rx="12" fill="#FBF9EF" stroke="#251F1A" stroke-opacity="0.15"/>
+  <text x="251" y="206" text-anchor="middle" font-size="14.5" fill="#251F1A" font-weight="600">OCR + figures</text>
+  <text x="251" y="225" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.55">text + diagrams</text>
+
+  <!-- C: hub -->
+  <rect x="350" y="150" width="172" height="120" rx="16" fill="#FFBC14" fill-opacity="0.18" stroke="#FFBC14" stroke-width="2.5"/>
+  <text x="436" y="200" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="19" fill="#251F1A">Topic →</text>
+  <text x="436" y="224" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="19" fill="#251F1A">Concept graph</text>
+  <text x="436" y="248" text-anchor="middle" font-size="12" fill="#251F1A" fill-opacity="0.6">the one deep read</text>
+
+  <!-- D: Bo + Researcher -->
+  <rect x="557" y="178" width="135" height="64" rx="12" fill="#1D4B3A"/>
+  <text x="624" y="206" text-anchor="middle" font-size="14.5" fill="#FBF9EF" font-weight="600">Bo + Researcher</text>
+  <text x="624" y="225" text-anchor="middle" font-size="11" fill="#FBF9EF" fill-opacity="0.7">grounded in your course</text>
+
+  <!-- fan to chips -->
+  <g stroke="#251F1A" stroke-opacity="0.3" stroke-width="1.2">
+    <line x1="692" y1="210" x2="713" y2="88"  marker-end="url(#arrow)"/>
+    <line x1="692" y1="210" x2="713" y2="127" marker-end="url(#arrow)"/>
+    <line x1="692" y1="210" x2="713" y2="166" marker-end="url(#arrow)"/>
+    <line x1="692" y1="210" x2="713" y2="205" marker-end="url(#arrow)"/>
+    <line x1="692" y1="210" x2="713" y2="244" marker-end="url(#arrow)"/>
+    <line x1="692" y1="210" x2="713" y2="283" marker-end="url(#arrow)"/>
+    <line x1="692" y1="210" x2="713" y2="322" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- 7 artifact chips -->
+  <g font-size="13" fill="#251F1A" font-weight="600" text-anchor="middle">
+    <rect x="715" y="72"  width="155" height="32" rx="16" fill="#FBF9EF" stroke="#251F1A" stroke-opacity="0.15"/><text x="792" y="92">Flashcards</text>
+    <rect x="715" y="111" width="155" height="32" rx="16" fill="#FBF9EF" stroke="#251F1A" stroke-opacity="0.15"/><text x="792" y="131">Quiz</text>
+    <rect x="715" y="150" width="155" height="32" rx="16" fill="#FBF9EF" stroke="#251F1A" stroke-opacity="0.15"/><text x="792" y="170">Exam</text>
+    <rect x="715" y="189" width="155" height="32" rx="16" fill="#FBF9EF" stroke="#251F1A" stroke-opacity="0.15"/><text x="792" y="209">Study guide</text>
+    <rect x="715" y="228" width="155" height="32" rx="16" fill="#FBF9EF" stroke="#251F1A" stroke-opacity="0.15"/><text x="792" y="248">Cheat sheet</text>
+    <rect x="715" y="267" width="155" height="32" rx="16" fill="#FBF9EF" stroke="#251F1A" stroke-opacity="0.15"/><text x="792" y="287">Summary</text>
+    <rect x="715" y="306" width="155" height="32" rx="16" fill="#FBF9EF" stroke="#251F1A" stroke-opacity="0.15"/><text x="792" y="326">Mind map</text>
+  </g>
+
+  <!-- chips -> mastery -->
+  <path d="M 792,346 C 792,390 720,400 690,420" fill="none" stroke="#251F1A" stroke-opacity="0.4" stroke-width="1.4" marker-end="url(#arrow)"/>
+
+  <!-- mastery layer -->
+  <rect x="240" y="424" width="430" height="70" rx="14" fill="#1D4B3A" fill-opacity="0.12" stroke="#1D4B3A" stroke-width="1.5"/>
+  <text x="455" y="456" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="18" fill="#1D4B3A">Mastery layer</text>
+  <text x="455" y="478" text-anchor="middle" font-size="13" fill="#251F1A" fill-opacity="0.7">remembers what each student knows, across the whole semester</text>
+
+  <!-- mastery -> hub feedback (dashed) -->
+  <path d="M 320,424 C 300,360 350,300 396,272" fill="none" stroke="#1D4B3A" stroke-width="1.6" stroke-dasharray="5 5" marker-end="url(#arrowGreen)"/>
+  <text x="270" y="350" font-size="12.5" fill="#1D4B3A" font-weight="600">feeds back</text>
+  <text x="262" y="367" font-size="12.5" fill="#1D4B3A" fill-opacity="0.8">into the graph</text>
+
+  <text x="48" y="528" font-size="12.5" fill="#251F1A" fill-opacity="0.5">This is the moat: ChatGPT can make flashcards, but it forgets you between chats. The graph and the mastery layer do not.</text>
+</svg>

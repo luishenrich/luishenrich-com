@@ -1,0 +1,52 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="'Nunito', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="growthFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFBC14" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#FFBC14" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="800" height="500" rx="24" fill="#F7F4E3"/>
+
+  <!-- title -->
+  <text x="48" y="52" font-family="'Fraunces', Georgia, serif" font-size="30" fill="#251F1A">149 to 92,625 users in 22 months</text>
+  <text x="48" y="76" font-size="15" fill="#251F1A" fill-opacity="0.55">Registered users, cumulative · Aug 2024 to Jun 2026</text>
+
+  <!-- gridlines -->
+  <g stroke="#251F1A" stroke-opacity="0.10" stroke-width="1">
+    <line x1="70" y1="337.9" x2="770" y2="337.9"/>
+    <line x1="70" y1="245.8" x2="770" y2="245.8"/>
+    <line x1="70" y1="153.7" x2="770" y2="153.7"/>
+    <line x1="70" y1="430" x2="770" y2="430"/>
+  </g>
+  <g font-size="12" fill="#251F1A" fill-opacity="0.45" text-anchor="end">
+    <text x="60" y="342">25k</text>
+    <text x="60" y="250">50k</text>
+    <text x="60" y="158">75k</text>
+  </g>
+
+  <!-- area + line -->
+  <path fill="url(#growthFill)" d="M 70,429.5 L 101.8,426.6 L 133.6,420.9 L 165.5,416.4 L 197.3,410.1 L 229.1,403.9 L 260.9,393.4 L 292.7,371.0 L 324.5,357.7 L 356.4,341.1 L 388.2,329.9 L 420.0,320.5 L 451.8,306.0 L 483.6,277.3 L 515.5,249.1 L 547.3,230.4 L 579.1,211.1 L 610.9,198.2 L 642.7,182.8 L 674.5,167.8 L 706.4,138.4 L 738.2,106.9 L 770.0,88.7 L 770,430 L 70,430 Z"/>
+  <path fill="none" stroke="#FFBC14" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" d="M 70,429.5 L 101.8,426.6 L 133.6,420.9 L 165.5,416.4 L 197.3,410.1 L 229.1,403.9 L 260.9,393.4 L 292.7,371.0 L 324.5,357.7 L 356.4,341.1 L 388.2,329.9 L 420.0,320.5 L 451.8,306.0 L 483.6,277.3 L 515.5,249.1 L 547.3,230.4 L 579.1,211.1 L 610.9,198.2 L 642.7,182.8 L 674.5,167.8 L 706.4,138.4 L 738.2,106.9 L 770.0,88.7"/>
+
+  <!-- rewrite marker -->
+  <line x1="738.2" y1="92" x2="738.2" y2="430" stroke="#1D4B3A" stroke-width="1.5" stroke-dasharray="4 4" stroke-opacity="0.7"/>
+  <line x1="566" y1="124" x2="734" y2="108" stroke="#1D4B3A" stroke-width="1" stroke-opacity="0.5"/>
+  <text x="560" y="118" text-anchor="end" font-size="13.5" fill="#1D4B3A" font-weight="600">I rebuilt the whole product</text>
+  <text x="560" y="136" text-anchor="end" font-size="13.5" fill="#1D4B3A" fill-opacity="0.8">here, late May 2026</text>
+
+  <!-- final point -->
+  <circle cx="770" cy="88.7" r="6" fill="#FFBC14" stroke="#251F1A" stroke-width="2"/>
+  <text x="762" y="80" text-anchor="end" font-family="'Fraunces', Georgia, serif" font-size="18" fill="#251F1A">92,625</text>
+
+  <!-- x labels -->
+  <g font-size="12" fill="#251F1A" fill-opacity="0.45" text-anchor="middle">
+    <text x="70" y="450">Aug '24</text>
+    <text x="229" y="450">Jan '25</text>
+    <text x="388" y="450">Jun '25</text>
+    <text x="611" y="450">Jan '26</text>
+    <text x="770" y="450">Jun '26</text>
+  </g>
+
+  <text x="48" y="484" font-size="12.5" fill="#251F1A" fill-opacity="0.5">Strongest months: May 2026 (+8,543) and April 2026 (+7,990), the two around the rewrite.</text>
+</svg>

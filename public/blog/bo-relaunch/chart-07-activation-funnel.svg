@@ -1,0 +1,29 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="'Nunito', system-ui, sans-serif">
+  <rect x="0" y="0" width="800" height="500" rx="24" fill="#F7F4E3"/>
+
+  <text x="48" y="52" font-family="'Fraunces', Georgia, serif" font-size="30" fill="#251F1A">The leak is the first artifact, not retention</text>
+  <text x="48" y="76" font-size="15" fill="#251F1A" fill-opacity="0.55">What share of new signups reaches each step (June 2026)</text>
+
+  <!-- funnel bars, centered, width by % of 700px max -->
+  <!-- Signups 100% -> 700 wide, x 50 -->
+  <rect x="50" y="110" width="700" height="64" rx="10" fill="#1D4B3A" fill-opacity="0.85"/>
+  <text x="400" y="150" text-anchor="middle" font-size="17" fill="#FBF9EF" font-weight="600">Signups · 100%</text>
+
+  <!-- First upload 51% -> 357 wide, centered x 221.5 -->
+  <rect x="221.5" y="196" width="357" height="64" rx="10" fill="#FFBC14"/>
+  <text x="400" y="236" text-anchor="middle" font-size="17" fill="#251F1A" font-weight="600">First upload · ~51%</text>
+
+  <!-- First artifact 28% -> 196 wide, centered x 302 -->
+  <rect x="302" y="282" width="196" height="64" rx="10" fill="#FFBC14" fill-opacity="0.75"/>
+  <text x="400" y="322" text-anchor="middle" font-size="16" fill="#251F1A" font-weight="600">First artifact · ~28%</text>
+
+  <!-- annotations -->
+  <text x="586" y="234" font-size="13" fill="#1D4B3A" font-weight="600">activation lever lifted</text>
+  <text x="586" y="251" font-size="13" fill="#1D4B3A">this to ~69%</text>
+
+  <line x1="498" y1="314" x2="640" y2="392" stroke="#251F1A" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="400" y="404" text-anchor="middle" font-size="14.5" fill="#251F1A">Only ~3 in 10 signups reach an artifact at all.</text>
+  <text x="400" y="430" text-anchor="middle" font-size="14.5" fill="#251F1A">But the ones who do return at 22.4% W1, vs 3.9% for those who don't.</text>
+
+  <text x="48" y="478" font-size="12.5" fill="#251F1A" fill-opacity="0.5">Retention was never broken. It is conditional on reaching that first artifact.</text>
+</svg>
