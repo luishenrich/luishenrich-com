@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# StudyPDF blog handoff context (contains internal numbers — never commit to this PUBLIC repo)
+blog-handoff/
