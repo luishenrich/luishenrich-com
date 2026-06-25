@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Luis Henrich-Bandis. 22, solo founder of StudyPDF (85,000 users), Master's student at RWTH Aachen.",
+    "Luis Henrich-Bandis. 22, solo founder of StudyPDF (92,000 users), Master's student at RWTH Aachen.",
 };
 
 export default function About() {
@@ -44,8 +44,8 @@ export default function About() {
         <p className="text-text-secondary mb-7">
           We started it in summer 2023. A friend, his exam prep, and ChatGPT
           failing at PDFs in spectacularly stupid ways. I built the first
-          version in three weeks. Two years later it&rsquo;s at 85,000 users
-          across 200+ universities, ~$1.5k MRR, around 600 daily actives, 150k+
+          version in three weeks. Two years later it&rsquo;s at 92,000 users
+          across 200+ universities, around 600 daily actives, 150k+
           documents processed, and I run it solo from Cologne. I do all of it:
           the AI pipeline, the infra, the support emails, the SEO posts, the
           late-night bug that turned out to be a vector store leaking across

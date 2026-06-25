@@ -5,14 +5,14 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "What I've built. StudyPDF, an AI study platform with 85,000 users running solo.",
+    "What I've built. StudyPDF, an AI study platform with 92,000 users running solo.",
 };
 
 const numbers = [
-  { value: "85,000", label: "Registered users" },
+  { value: "92,000", label: "Registered users" },
   { value: "200+", label: "Universities" },
   { value: "150k+", label: "Documents processed" },
-  { value: "$1.5k", label: "MRR" },
+  { value: "99%", label: "Organic growth" },
   { value: "600+", label: "Daily active users" },
   { value: "1", label: "Engineer" },
 ];
@@ -48,20 +48,30 @@ export default function Work() {
             StudyPDF
           </h2>
           <p className="text-text-secondary mb-6">
-            An AI study platform that turns lectures, slides, and PDFs into
-            flashcards, practice exams, mind maps, and structured study
-            guides. Students upload, the AI extracts what matters, and what
-            comes out is something they can actually study from at 2am the
-            night before an exam.
+            An AI study tool built around one AI study companion named Bo. You
+            upload your course (lectures, slides, scanned notes, even a YouTube
+            lecture), then you talk to Bo. It answers from your own material
+            and builds flashcards, quizzes, practice exams, study guides, cheat
+            sheets, and mind maps inside the chat, as you ask. Everything stays
+            scoped to your course and is cited back to the exact page, so you
+            study from your material and not the open internet.
           </p>
-          <a
-            href="https://studypdf.net"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent hover:opacity-80 transition-opacity text-sm"
-          >
-            studypdf.net ↗
-          </a>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+            <a
+              href="https://studypdf.net"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-accent hover:opacity-80 transition-opacity"
+            >
+              studypdf.net ↗
+            </a>
+            <Link
+              href="/deck"
+              className="text-accent hover:opacity-80 transition-opacity"
+            >
+              See the pitch deck →
+            </Link>
+          </div>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-10 mb-20 pt-10 border-t border-border">
@@ -83,23 +93,34 @@ export default function Work() {
               How it works
             </h3>
             <p className="text-text-secondary mb-6">
-              One expensive extraction at upload time. A reasoning model reads
-              the document and pulls out{" "}
-              <span className="text-text-primary">topics</span>, and within
-              each topic, the{" "}
-              <span className="text-text-primary">concepts</span> that are
-              discussed, applied, or explained, each tied back to the source
-              page. Every downstream feature (flashcards, practice exams, mind
-              maps, chat) is generated against that same tree, using
-              embeddings of the relevant concept chunks for retrieval. The
-              deep analysis runs once per document, not once per feature. Cost
-              goes down, quality goes up.
+              One expensive read at upload time. A reasoning model reads the
+              whole course once and pulls out the structure: the{" "}
+              <span className="text-text-primary">topics</span>, the{" "}
+              <span className="text-text-primary">concepts</span> inside each
+              topic, and how they connect. That graph is stored at the course
+              level and de-duplicated across lectures, so lecture five knows it
+              is talking about the same idea lecture two introduced.
+            </p>
+            <p className="text-text-secondary mb-6">
+              Everything hangs off that one graph. When you ask Bo for
+              something, a separate Researcher agent searches your course, and
+              every concept or figure that lands in an answer or an artifact
+              comes from those verified results, never invented. Citations
+              point back to the lecture and the page.
+            </p>
+            <p className="text-text-secondary mb-6">
+              And every time you study, the result writes back: what you got
+              right, what you stumbled on. That running record is the{" "}
+              <span className="text-text-primary">mastery layer</span>, a
+              per-student picture of what you know that compounds across the
+              semester. The model is not the moat. The memory is.
             </p>
             <Image
-              src="/blog/85k-users-solo/architecture.png"
-              alt="StudyPDF architecture: a single expensive extraction feeds every downstream feature"
-              width={1600}
-              height={900}
+              src="/blog/bo-relaunch/chart-05-architecture.svg"
+              alt="StudyPDF architecture: one deep read builds a course concept graph that Bo and every study tool reuse, and the mastery layer feeds back into it"
+              width={900}
+              height={560}
+              unoptimized
               className="rounded-lg border border-border w-full h-auto mt-6"
             />
           </div>
@@ -142,7 +163,7 @@ export default function Work() {
 
         <div className="mt-16 pt-10 border-t border-border">
           <Link
-            href="/blog/85k-users-solo"
+            href="/blog/the-bo-rewrite"
             className="text-accent hover:opacity-80 transition-opacity text-sm"
           >
             Read the long version →

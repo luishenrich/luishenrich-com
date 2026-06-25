@@ -42,3 +42,6 @@ next-env.d.ts
 
 # StudyPDF blog handoff context (contains internal numbers — never commit to this PUBLIC repo)
 blog-handoff/
+
+# local Claude Code tooling config
+.claude/

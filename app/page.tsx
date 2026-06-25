@@ -56,8 +56,8 @@ export default async function Home() {
           >
             StudyPDF
           </a>{" "}
-          alone from Cologne. 85,000 users, $1.5k MRR, 200+ universities,
-          one engineer.
+          alone from Cologne. 92,000 users, 200+ universities, one
+          engineer.
         </p>
         <p className="text-text-secondary mt-8">
           I write here when something&rsquo;s actually worth writing about.
