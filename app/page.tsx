@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { getAllPosts } from "@/lib/posts";
 import { formatDate } from "@/lib/format";
@@ -39,13 +40,23 @@ export default async function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
       />
       <section className="mb-20">
-        <h1 className="text-3xl sm:text-4xl font-semibold tracking-[-0.02em] leading-[1.15] mb-6 flex items-baseline gap-3">
-          Luis Henrich-Bandis
-          <span
-            aria-hidden
-            className="inline-block w-2 h-2 rounded-full bg-accent translate-y-[-2px]"
+        <div className="flex items-center gap-5 mb-6">
+          <Image
+            src="/luis-bw.jpg"
+            alt="Luis Henrich-Bandis"
+            width={160}
+            height={160}
+            priority
+            className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover border border-border shrink-0"
           />
-        </h1>
+          <h1 className="text-3xl sm:text-4xl font-semibold tracking-[-0.02em] leading-[1.15] flex items-baseline gap-3">
+            Luis Henrich-Bandis
+            <span
+              aria-hidden
+              className="inline-block w-2 h-2 rounded-full bg-accent translate-y-[-2px]"
+            />
+          </h1>
+        </div>
         <p className="text-text-secondary">
           I&rsquo;m Luis. 22, Master&rsquo;s at RWTH Aachen, building{" "}
           <a
