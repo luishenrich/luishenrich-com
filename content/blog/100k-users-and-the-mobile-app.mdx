@@ -1,0 +1,156 @@
+export const meta = {
+  title: "100,000 users, and the number that is going down",
+  date: "2026-08-07",
+  description:
+    "Fifteen thousand registrations later: organic traffic quadrupled year over year, monthly active users have fallen three months running, and the iPhone app went live two days ago.",
+};
+
+![100,000 registered. 11,799 active. And the app just launched · Luis Henrich-Bandis](/blog/100k-users-and-the-mobile-app/hero.png)
+
+StudyPDF passed 100,000 registered users at **20:44 on July 21**, which I know to the second because I went and looked in the database rather than rounding. Today it is **102,620**. Three months ago, when I wrote [the last one of these](/blog/85k-users-solo), it was 85,000.
+
+Here is the number I would rather lead with. Monthly active users are **11,799**, and they have fallen every month since May.
+
+Both of those are true at the same time, and the second one is the more useful fact about my business. So this post is mostly about that.
+
+I am 23, doing my Master's at RWTH Aachen, and I have been running this alone since January 2026.
+
+---
+
+## Where the traffic came from
+
+Organic, to a degree that still surprises me. In the window since the last post, paid acquisition accounted for **3 sessions out of 95,197**. That is the whole ad budget, visible in the data.
+
+Year over year, the marketing site went from **13,731 organic sessions** to **55,484**. Four times over, in twelve months.
+
+The mechanism is a content pipeline. Agents draft long-form articles, I edit them, we publish. Everything is internationalised, and that part has stopped being a nice-to-have:
+
+| Locale | Sessions | Share |
+|---|---|---|
+| English | 50,802 | 73.3% |
+| German | 10,250 | 14.8% |
+| Spanish | 8,213 | 11.9% |
+
+A German page, `/de/anwendungen/lernzettel-erstellen`, is the **fifth largest organic entry point on the entire site**, at 3.8% of organic sessions. Two Spanish pages sit in the top fifteen. One article really does work three times, and I did not expect the non-English versions to outrank most of the English ones.
+
+The top five entry pages carry 48.7% of organic sessions:
+
+| Entry page | Sessions | Share |
+|---|---|---|
+| `/` | 11,007 | 18.8% |
+| `/use-cases/ai-notes-generator` | 7,605 | 13.0% |
+| `/use-cases/youtube-to-notes-ai` | 4,435 | 7.6% |
+| `/use-cases/pdf-to-reviewer-ai` | 3,270 | 5.6% |
+| `/de/anwendungen/lernzettel-erstellen` | 2,214 | 3.8% |
+
+The other thing worth naming is AI-engine traffic. Sessions arriving from an AI assistant went from **34 a year ago to 1,665** in the current window. That is 1.75% of all sessions, so it is not carrying the business, but it is a 49-fold increase in twelve months and the fastest-growing channel I have. ChatGPT is most of it at 755 sessions, then Gemini at 170 and Perplexity at 129. There are also engines in there I was not tracking on purpose, including Doubao and Qwen.
+
+I want to be careful with that number, because the tempting version of it is wrong. I cannot tell you what share of *signups* comes from AI engines. My signup event fires server-side and carries no referrer, so **86.6% of signups have no attribution at all**. The AI figure above is sessions, measured client-side, and it is the only version of it I trust.
+
+---
+
+## The number that is going down
+
+Now the part that matters more.
+
+| Month | New registrations |
+|---|---|
+| May 2026 | 8,542 |
+| June 2026 | 7,926 |
+| July 2026 | 6,037 |
+
+That is a 23.8% drop from June to July. Monthly active users tell the same story: **14,718** in May, **13,111** in June, **12,466** in July, and 11,799 on a rolling thirty days to August 6. Three consecutive months down from the peak.
+
+![Monthly active users from December 2025 to July 2026, peaking in May and falling for three months](/blog/100k-users-and-the-mobile-app/chart-mau.svg)
+
+*The same chart I published in June, three months later, with the part that goes down. December to May is the run I wrote about last time. June and July are the part I did not.*
+
+The obvious explanation is the season, and I think it is mostly right. Mid-August the US is on holiday and almost nobody in Europe is sitting an exam, and a product where most usage is exam-driven should empty out exactly now. Daily actives are noisy enough that I would not read much into a single day: over the last three weeks the range is 352 to 589, averaging 473.
+
+But "it is the summer" is also the most comfortable available explanation, and I published a post in June about how the comfortable explanation had been wrong twice in a row. So I am writing the number down now, in public, before I know: if signups and monthly actives are not climbing again by the end of October, with a full semester running, then this was not the season.
+
+---
+
+## The mobile app, honestly
+
+The plan for this post was to announce the mobile app. The honest version is smaller than the announcement I had in my head.
+
+The app is React Native and Expo, with EAS for builds. That choice was not about performance. It was about how many things one person can hold. The web app is Next.js and TypeScript, the mobile app is React Native and TypeScript, and the API is the same API. I did not want to learn two native toolchains or keep two definitions of what a course is.
+
+Three decisions exist purely because I am on my own.
+
+**Over-the-air updates.** Anything that is JavaScript ships without an app store review. On the web, a bad regression is a deploy away from fixed. On mobile without OTA it is a fixed cost of days at the mercy of a review queue, while every user sits on the broken build.
+
+**A force-update gate.** The app checks a minimum supported version against the API on launch, and anything below it gets a blocking screen rather than a broken session. The web has no old clients. Mobile has nothing but old clients unless you build the thing that lets you retire them.
+
+**Cached-data-first screens.** Students use this on trains and in lecture halls with bad wifi, so every list screen renders from cache and reconciles after. It is not real offline support. You cannot generate an artifact without a network and I am not going to pretend otherwise.
+
+And here is the size of it. The app went public on **August 5**, two days before this post. Everything before that was me and a handful of testers.
+
+So there are no adoption numbers in this post, and not because I am being coy. Two days is not a measurement. Ask me in October.
+
+What I can tell you is that it is **iPhone and iPad only**. Android was planned and is not shipped. There is not a single Android event in my analytics, ever, and no Android client has ever authenticated against the API, which for once is exactly what it looks like rather than a tracking bug.
+
+Writing "we launched mobile" as though it were a milestone, two days in, is the kind of sentence I started this blog to avoid. The app is out. That is the whole claim.
+
+What it did cost is real, and it is the part worth reading. Two more platforms, each with its own release cadence, review process, crash reporting, store listing in three languages, and a class of user who cannot just refresh the page. That weight arrives in full on day one, whether or not the users do.
+
+---
+
+## What got harder at this size
+
+Support runs at roughly **20 emails a week**, and I can only tell you that because I counted my inbox, not because anything measures it. I have no ticketing system wired up. The in-product signals, 91 feedback submissions and 103 feature requests since May, are far too small to be the real volume, which means most of it lives in a place nothing counts.
+
+The signal I do have is worse and more useful. `error_page_shown` fired **7,721 times for 2,275 different people** since May. That is not support volume, it is the number of people who hit an error screen and mostly did not tell me. Given roughly 12,000 monthly actives, close to one in five users has seen an error page in three months.
+
+That is the real shape of the gap at this size. It is not that support is loud. It is that most of the failures are silent, and the number of things I can maintain properly is growing much more slowly than the number of things I can build. Agents write code at a rate that has nothing to do with my ability to keep the result alive, and if I let shipping set the maintenance load, the maintenance load wins. That already happened once this year: the mastery layer, the thing the entire June rewrite depended on, was quietly broken for weeks while I shipped other things.
+
+So the rule from the last post still holds: **if a feature needs more than two hours of maintenance a month, it gets cut.**
+
+---
+
+## What I cut, and it was not features
+
+The honest answer to "what did you remove" is: barely any features. What I removed was questions.
+
+When Bo shipped in June, it behaved like a well-mannered assistant. Before it made you anything it wanted to know how hard the flashcards should be, how many of them you wanted, and which topics to cover. Every one of those is a reasonable thing to ask. Together they are a form, and I had rebuilt the dashboard I had just deleted, except now it was made of sentences.
+
+Users told me, repeatedly, that they did not want to answer. Not because the questions were bad but because they do not have the answer. Nobody knows in advance how hard their flashcards should be. What they actually want is for the cards to be hard enough to be worth doing and easy enough to learn from, which is a judgement, not a setting.
+
+So Bo decides now. Difficulty and the number of items are inferred from the mastery layer, from what you have been getting right and wrong, and they move as you do. You get as many questions as the material and your record suggest you need, rather than the twenty you guessed at before you started.
+
+One question survived, and it is the one nobody minded answering: do you want to work through the whole file and every topic in it, or one topic at a time? That one is about intent rather than configuration, and users answer it instantly.
+
+That is the version of the two-hour rule I did not expect. The maintenance cost of a product is not only the features in it. It is also every choice you hand to the user, because each one is a branch you have to keep working, explain in three languages, and support when it confuses someone. Taking the difficulty selector out removed a setting, a set of prompt paths, and a category of support email in one move.
+
+It is also the first time the mastery layer has done something a user can feel. In June it was infrastructure I had bet on and could not prove. Now it decides how hard your next question is.
+
+---
+
+## What 100,000 registered users actually means
+
+Not what the headline implies, so let me put it plainly.
+
+102,620 is every account ever created. About **11,800** were active in the last thirty days. That is **11.5%**, so roughly one in nine registered users is active in a given month and the other eight signed up once and did not come back.
+
+That gap between 102,620 and 11,800 is not a footnote on the number. In a real sense it is the number. Roughly ninety thousand people found this product, tried it, and it did not hold them. Every post I have written this year has been circling that fact from one angle or another, including [the one I published today](/blog/did-the-bet-work) about the rewrite, which is the same problem seen from the other end.
+
+I keep publishing the registered figure because it is the honest measure of how many people have found the thing, and I would rather print it next to the active number than quietly stop mentioning either one.
+
+Two caveats on the precision, because this post is partly about measurement.
+
+The registered figure comes from the application database, and my analytics cannot confirm it. The signup event has gaps covering December 2025 through March 2026 and everything before October 2025, so there is no complete registration ledger in there to check against. The active numbers are the opposite: solid in analytics, verified against six months of history. Both are trustworthy and they are trustworthy in different ways, which is not the same as agreeing.
+
+And the milestone moves depending on how you count. Every account gives 102,620 and puts the hundred-thousandth on July 21. Excluding internal accounts and the **1,150** on manually granted free access gives 101,466 and moves the date to July 28. I went with every account, because someone on free access is still a person who registered, and because the milestone is true under the strict definition too. But it is a week apart, and if I had wanted a particular date I could have picked one. That is exactly the mechanism that produced the numbers I could not reproduce in [the other post I published today](/blog/did-the-bet-work), so I am writing the choice down instead of quietly making it.
+
+---
+
+## What is still unsolved
+
+Cross-semester retention. Students come for an exam and leave when it is over. The June rewrite changed the shape of that problem and did not solve it.
+
+Whether mobile helps is the question I care most about, and I have to sit on it, because two days of data cannot answer it. Phones are where habits live, and a study tool you can open in a queue for four minutes is a different object from one that needs a laptop. That is why I built it. It is also exactly the kind of reasoning that sounds obviously right and turns out to be a story I told myself, and I said something equally sensible about the mastery layer in June and was wrong.
+
+So the next one of these gets written in October, when there is a semester running, the app is actually in people's hands, and I can tell you whether any of this was the product or just the calendar.
+
+If you are building in applied AI, solo or close to it, I would like to hear from you. Find me at [studypdf.net](https://studypdf.net), [luishenrich.com](https://luishenrich.com), or [@luisnhenrich](https://x.com/luisnhenrich) on X.

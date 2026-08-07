@@ -1,0 +1,36 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="'Nunito', system-ui, sans-serif">
+  <rect x="0" y="0" width="800" height="500" rx="24" fill="#F7F4E3"/>
+
+  <text x="48" y="52" font-family="'Fraunces', Georgia, serif" font-size="30" fill="#251F1A">Monthly active users, and three months down</text>
+  <text x="48" y="76" font-size="15" fill="#251F1A" fill-opacity="0.55">Unique app visitors per month · Dec 2025 to Jul 2026</text>
+
+  <line x1="70" y1="410" x2="770" y2="410" stroke="#251F1A" stroke-opacity="0.15" stroke-width="1"/>
+  <rect x="78" y="368.1" width="64" height="41.9" rx="7" fill="#FFBC14" fill-opacity="0.85"/>
+  <text x="110" y="358.1" text-anchor="middle" font-size="13" fill="#251F1A" fill-opacity="0.8">2,237</text>
+  <text x="110" y="432" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.6">Dec '25</text>
+  <rect x="165" y="308.7" width="64" height="101.3" rx="7" fill="#FFBC14" fill-opacity="0.85"/>
+  <text x="197" y="298.7" text-anchor="middle" font-size="13" fill="#251F1A" fill-opacity="0.8">5,402</text>
+  <text x="197" y="432" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.6">Jan</text>
+  <rect x="252" y="284.4" width="64" height="125.6" rx="7" fill="#FFBC14" fill-opacity="0.85"/>
+  <text x="284" y="274.4" text-anchor="middle" font-size="13" fill="#251F1A" fill-opacity="0.8">6,697</text>
+  <text x="284" y="432" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.6">Feb</text>
+  <rect x="339" y="285.1" width="64" height="124.9" rx="7" fill="#FFBC14" fill-opacity="0.85"/>
+  <text x="371" y="275.1" text-anchor="middle" font-size="13" fill="#251F1A" fill-opacity="0.8">6,659</text>
+  <text x="371" y="432" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.6">Mar</text>
+  <rect x="426" y="188.8" width="64" height="221.3" rx="7" fill="#FFBC14" fill-opacity="0.85"/>
+  <text x="458" y="178.8" text-anchor="middle" font-size="13" fill="#251F1A" fill-opacity="0.8">11,800</text>
+  <text x="458" y="432" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.6">Apr</text>
+  <rect x="513" y="134.0" width="64" height="276.0" rx="7" fill="#FFBC14" fill-opacity="0.85"/>
+  <text x="545" y="124.0" text-anchor="middle" font-size="13" fill="#251F1A" fill-opacity="0.8">14,718</text>
+  <text x="545" y="432" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.6">May</text>
+  <rect x="600" y="164.2" width="64" height="245.8" rx="7" fill="#1D4B3A" fill-opacity="0.55"/>
+  <text x="632" y="154.2" text-anchor="middle" font-size="13" fill="#251F1A" fill-opacity="0.8">13,111</text>
+  <text x="632" y="432" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.6">Jun</text>
+  <rect x="687" y="176.3" width="64" height="233.7" rx="7" fill="#1D4B3A" fill-opacity="0.55"/>
+  <text x="719" y="166.3" text-anchor="middle" font-size="13" fill="#251F1A" fill-opacity="0.8">12,466</text>
+  <text x="719" y="432" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.6">Jul '26</text>
+  <text x="591" y="86" font-size="13.5" fill="#1D4B3A" font-weight="600">peak, then down</text>
+  <line x1="545" y1="94" x2="677" y2="94" stroke="#1D4B3A" stroke-width="1" stroke-opacity="0.45"/>
+
+  <text x="48" y="478" font-size="12.5" fill="#251F1A" fill-opacity="0.5">July is a complete month. The rolling 30 days to Aug 6 is 11,799, so the decline continues.</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="'Nunito', system-ui, sans-serif">
+  <rect x="0" y="0" width="800" height="500" rx="24" fill="#F7F4E3"/>
+
+  <text x="48" y="52" font-family="'Fraunces', Georgia, serif" font-size="30" fill="#251F1A">Week-one return: 32.2% against 7.4%</text>
+  <text x="48" y="76" font-size="15" fill="#251F1A" fill-opacity="0.55">Signups Jun 15 to Jul 31 2026, split by whether they made one study artifact</text>
+
+  <line x1="70" y1="400" x2="770" y2="400" stroke="#251F1A" stroke-opacity="0.15" stroke-width="1"/>
+  <rect x="150" y="184.3" width="200" height="215.7" rx="10" fill="#FFBC14" fill-opacity="1"/>
+  <text x="250" y="168.3" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="30" fill="#251F1A">32.2%</text>
+  <text x="250" y="426" text-anchor="middle" font-size="15" fill="#251F1A" fill-opacity="0.75">Made an artifact</text>
+  <text x="250" y="446" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.5">n = 4,101</text>
+  <rect x="470" y="350.4" width="200" height="49.6" rx="10" fill="#FFBC14" fill-opacity="0.42"/>
+  <text x="570" y="334.4" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="30" fill="#251F1A">7.4%</text>
+  <text x="570" y="426" text-anchor="middle" font-size="15" fill="#251F1A" fill-opacity="0.75">Made none</text>
+  <text x="570" y="446" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.5">n = 6,077</text>
+
+  <text x="48" y="461" font-size="12.5" fill="#251F1A" fill-opacity="0.5">A return is a day with client-side app activity, days 2 to 8 after signup. The same definition is applied to both bars.</text>
+  <text x="48" y="478" font-size="12.5" fill="#251F1A" fill-opacity="0.5">This is a correlation. The one randomised test that could separate cause from selection was too small to read.</text>
+</svg>

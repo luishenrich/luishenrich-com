@@ -1,0 +1,47 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="'Nunito', system-ui, sans-serif">
+  <rect x="0" y="0" width="800" height="500" rx="24" fill="#F7F4E3"/>
+
+  <text x="48" y="52" font-family="'Fraunces', Georgia, serif" font-size="30" fill="#251F1A">Week-one return, cohort by cohort</text>
+  <text x="48" y="76" font-size="15" fill="#251F1A" fill-opacity="0.55">Each weekly signup cohort, share returning the following week · May to Jul 2026</text>
+
+  <line x1="80" y1="400" x2="772" y2="400" stroke="#251F1A" stroke-opacity="0.15" stroke-width="1"/>
+  <line x1="247" y1="104" x2="247" y2="400" stroke="#1D4B3A" stroke-width="1.5" stroke-dasharray="4 4" stroke-opacity="0.6"/>
+  <text x="257" y="120" font-size="13.5" fill="#1D4B3A" font-weight="600">the rewrite went live, June 1</text>
+  <path fill="none" stroke="#FFBC14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M 92,254.0 L 154,266.2 L 216,271.0 L 278,246.7 L 340,210.2 L 402,241.8 L 464,219.9 L 526,161.5 L 588,200.5 L 650,137.2 L 712,156.7"/>
+  <circle cx="92" cy="254.0" r="5.5" fill="#F7F4E3" stroke="#FFBC14" stroke-width="2.5"/>
+  <text x="92" y="238.0" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.8">6.0</text>
+  <text x="92" y="426" text-anchor="middle" font-size="11.5" fill="#251F1A" fill-opacity="0.55">May 10</text>
+  <circle cx="154" cy="266.2" r="5.5" fill="#F7F4E3" stroke="#FFBC14" stroke-width="2.5"/>
+  <text x="154" y="250.2" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.8">5.5</text>
+  <text x="154" y="426" text-anchor="middle" font-size="11.5" fill="#251F1A" fill-opacity="0.55">May 17</text>
+  <circle cx="216" cy="271.0" r="5.5" fill="#F7F4E3" stroke="#FFBC14" stroke-width="2.5"/>
+  <text x="216" y="255.0" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.8">5.3</text>
+  <text x="216" y="426" text-anchor="middle" font-size="11.5" fill="#251F1A" fill-opacity="0.55">May 24</text>
+  <circle cx="278" cy="246.7" r="5.5" fill="#FFBC14" stroke="#F7F4E3" stroke-width="2.5"/>
+  <text x="278" y="230.7" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.8">6.3</text>
+  <text x="278" y="426" text-anchor="middle" font-size="11.5" fill="#251F1A" fill-opacity="0.55">May 31</text>
+  <circle cx="340" cy="210.2" r="5.5" fill="#FFBC14" stroke="#F7F4E3" stroke-width="2.5"/>
+  <text x="340" y="194.2" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.8">7.8</text>
+  <text x="340" y="426" text-anchor="middle" font-size="11.5" fill="#251F1A" fill-opacity="0.55">Jun 7</text>
+  <circle cx="402" cy="241.8" r="5.5" fill="#FFBC14" stroke="#F7F4E3" stroke-width="2.5"/>
+  <text x="402" y="225.8" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.8">6.5</text>
+  <text x="402" y="426" text-anchor="middle" font-size="11.5" fill="#251F1A" fill-opacity="0.55">Jun 14</text>
+  <circle cx="464" cy="219.9" r="5.5" fill="#FFBC14" stroke="#F7F4E3" stroke-width="2.5"/>
+  <text x="464" y="203.9" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.8">7.4</text>
+  <text x="464" y="426" text-anchor="middle" font-size="11.5" fill="#251F1A" fill-opacity="0.55">Jun 21</text>
+  <circle cx="526" cy="161.5" r="5.5" fill="#FFBC14" stroke="#F7F4E3" stroke-width="2.5"/>
+  <text x="526" y="145.5" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.8">9.8</text>
+  <text x="526" y="426" text-anchor="middle" font-size="11.5" fill="#251F1A" fill-opacity="0.55">Jun 28</text>
+  <circle cx="588" cy="200.5" r="5.5" fill="#FFBC14" stroke="#F7F4E3" stroke-width="2.5"/>
+  <text x="588" y="184.5" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.8">8.2</text>
+  <text x="588" y="426" text-anchor="middle" font-size="11.5" fill="#251F1A" fill-opacity="0.55">Jul 5</text>
+  <circle cx="650" cy="137.2" r="5.5" fill="#FFBC14" stroke="#F7F4E3" stroke-width="2.5"/>
+  <text x="650" y="121.2" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.8">10.8</text>
+  <text x="650" y="426" text-anchor="middle" font-size="11.5" fill="#251F1A" fill-opacity="0.55">Jul 12</text>
+  <circle cx="712" cy="156.7" r="5.5" fill="#FFBC14" stroke="#F7F4E3" stroke-width="2.5"/>
+  <text x="712" y="140.7" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.8">10.0</text>
+  <text x="712" y="426" text-anchor="middle" font-size="11.5" fill="#251F1A" fill-opacity="0.55">Jul 19</text>
+
+  <text x="48" y="461" font-size="12.5" fill="#251F1A" fill-opacity="0.5">Cohorts of 1,263 to 2,197 signups. Hollow points are cohorts that signed up before the rewrite shipped.</text>
+  <text x="48" y="478" font-size="12.5" fill="#251F1A" fill-opacity="0.5">The last complete cohort is the week of July 19. Later weeks exist but their window is not finished.</text>
+</svg>

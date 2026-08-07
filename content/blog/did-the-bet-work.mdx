@@ -1,0 +1,166 @@
+export const meta = {
+  title: "Did the bet work?",
+  date: "2026-08-07",
+  description:
+    "Ten weeks after rewriting StudyPDF around one agent: the retention curve roughly doubled at every week I can observe, and the metric I actually promised did not move at all.",
+};
+
+![Did the bet work? Mostly, yes. The curve doubled, the metric I promised did not move · Luis Henrich-Bandis](/blog/did-the-bet-work/hero.png)
+
+Ten weeks ago I deleted most of my product and rebuilt it around a single agent called Bo.
+
+I ended [that post](/blog/the-bo-rewrite) by saying the real question, whether the bet worked, deserved its own post with the actual numbers. This is that post. It goes differently than I expected, and not because the numbers were bad.
+
+Two sentences of context if you did not read the last one. StudyPDF used to be a dashboard of buttons: upload a PDF, pick a generation, wait half an hour. Now it is one agent scoped to a whole course, sitting on a concept graph and a mastery layer that records what you get right and wrong.
+
+---
+
+## What the bet was
+
+The rewrite was aimed at rhythm, not quality. On the old product roughly 70% of returns were exam-driven: people showed up the week before an exam, worked hard, passed, and disappeared. The bet was that an agent scoped to a whole course, with a memory of what you already know, would turn that into something you open for twenty minutes on a normal Tuesday.
+
+One correction to how I used to describe that problem. I had been saying a typical active user was active about five days out of thirty. When I measured it properly for this post, from two systems that do not share a definition, it came back at **1.27 active days** in my analytics and **1.20** server-side, both with a median of 1. The shape of the problem was right. The number I had been quoting for it was not, and one day a month is a starker version of the same thing.
+
+---
+
+## The answer
+
+With that said, here is what actually happened.
+
+Day-one retention did not move. For signups between April 15 and May 15, before the rewrite, it was **9.80%**. For signups between June 15 and July 8, after it, **10.02%**. That is flat, and it is the number I had staked the rewrite on.
+
+Active days per user, measured server-side, went from **1.08** to **1.20** per thirty days. Real, and almost nothing.
+
+And then the measure I had not been looking at.
+
+If you stop asking whether someone came back tomorrow and ask whether they came back the following week, the curve moved a lot. Weekly signup cohorts from May 10 to May 30, all of them before the cutover, returned the next week at **5.6%**. Cohorts from June 28 to July 11 returned at **9.1%**.
+
+![Retention curves before and after the rewrite, roughly double at every observable week](/blog/did-the-bet-work/chart-retention-curves.svg)
+
+*Both lines use the same definition: the share of a signup cohort active in each following calendar week. The gold line stops at week three because weeks four and five have not happened yet for those cohorts.*
+
+It is not just week one. Week two went from 2.1% to 3.9%. Week three from 1.0% to 2.0%. The whole curve lifted, roughly doubling at every week I can currently observe, which is a better result than a single point moving because a single point can be noise and a whole curve is harder to fake.
+
+Cohort by cohort it looks like this:
+
+![Week-one return by weekly cohort, flat before the rewrite and climbing after](/blog/did-the-bet-work/chart-week1-trend.svg)
+
+*Every weekly signup cohort with a complete window. The three cohorts before the cutover sit between 5.3% and 6.0%. Nothing in that stretch looks like it is going anywhere.*
+
+I find the left half of that chart more persuasive than the right half. Three consecutive pre-rewrite cohorts land at 6.0, 5.5 and 5.3, which is as flat as real data gets. Then the line goes up and mostly stays up, for eight cohorts and about 13,000 users.
+
+So the honest headline is not the one I expected to write. Day-one retention, the metric I promised, did not move at all. Week-one retention, which I was not tracking as the target, roughly doubled.
+
+Activation moved too, and that one I can point at on a calendar. The share of new signups who reach their first study artifact within a week went from about **31%** in the first weeks of June to **50%** in the week of July 27.
+
+![Signup to first artifact by weekly cohort, rising from 31 percent to 50 percent](/blog/did-the-bet-work/chart-activation.svg)
+
+*Share of each weekly signup cohort that created a study artifact within seven days. The step happens in the week of June 29 and holds for four weeks.*
+
+---
+
+## The thing I was sure about, and was wrong about
+
+I was sure the mastery layer would lift retention across the board. The product now knew each user better, so more of them would come back, and day-one retention would prove it.
+
+It is flat. 9.80 to 10.02. I ran it three times because I did not want it to be true.
+
+Then I split the cohort by whether someone had created a single artifact in their first week, and the picture inverted. For signups between June 15 and July 31, users who created an artifact returned in week one at **32.2%**. Users who did not returned at **7.4%**. Same product, same weeks, a gap of more than four to one.
+
+![Week one return: artifact creators 32.2 percent, non-creators 7.4 percent](/blog/did-the-bet-work/chart-creator-gap.svg)
+
+*Signups from June 15 to July 31. Creators n=4,101, non-creators n=6,077. Both bars use the same definition of a return: a day with client-side activity on the app, days two to eight after signup.*
+
+It holds into week two. On the strict measure, where returning means coming back and generating something, creators are at **3.13%** and non-creators at **0.14%**. By week four both are effectively zero: 19 creators and 3 non-creators out of 6,490, which I report only to be honest about how thin the long tail still is.
+
+So retention was never flat. It is conditional, and averaging the two populations produces a 10% that describes neither of them.
+
+That is the part I keep turning over. A per-student memory has nothing to remember until the student does something. For the roughly two thirds of signups who never produce an artifact, the mastery layer is not underperforming, it is empty. I spent five weeks building a thing whose effect could not appear in the metric I had promised to judge it by, and I would have caught that in an afternoon if I had written down beforehand what the number should look like if the bet worked. I wrote down what I hoped it would do instead.
+
+---
+
+## What actually moved, and the detail that surprised me
+
+The activation jump is the one clean result in this post. From about 31% to about 47% across four consecutive weeks, on cohorts of 1,200 to 1,900 users each. It is a step change, not drift, and it lands in the week of June 29.
+
+But it did not happen where I thought it did.
+
+I had assumed the win was upload: get people to put a file in, and the rest follows. The upload rate does not support that. Signup to first upload sits between 54% and 64% for the entire period and ends roughly where it started. It is the step *after* upload that changed, from upload to a finished artifact.
+
+Which reframes what the onboarding work actually did. It did not persuade more people to upload. It stopped losing the people who already had.
+
+I do not have a clean explanation for why that step got better in that specific week, and I am not going to invent one. Several things shipped around then.
+
+---
+
+## The caveat that could kill all of this
+
+The four-to-one gap is a correlation. Motivated students plausibly both create artifacts and come back, in which case pushing more people to a first artifact moves them one step further down a funnel they were always going to leave.
+
+There is exactly one randomized test in the data that speaks to this, and it is not good enough.
+
+An experiment called "onboarding landing: upload-first vs dashboard" ran with the course auto-created in both arms and only the landing screen differing. The upload-first arm lifted the creator rate from **26.0% to 37.0%**, a gain of 11 points. Week-one return for that arm went from 17.77% to **17.12%**. It fell by half a point.
+
+If the creator gap were fully causal, 11 points more creators should have produced roughly 3.4 points more week-one return. It produced none.
+
+I would love to tell you that settles it toward selection. It does not. The experiment ran for about one day before it was called, the arms are 146 against 1,891 users, and with n=146 the confidence interval on that 17.12% is roughly plus or minus 6 points. That interval comfortably contains both zero effect and the 3.4 points a causal model predicts. The experiment's own recorded design targeted a 30% minimum detectable effect on activation. It was never built to see a retention effect at all.
+
+So the single most important number in this post does not exist yet. The honest summary is that the one piece of randomized evidence I have leans toward selection and cannot carry weight.
+
+---
+
+## What the summer does to all of this
+
+I had this filed as a simple caveat: July and August are empty, so discount everything. It is not that simple, and the second half genuinely changed how I read the numbers.
+
+Signup volume fell from about 2,220 a week in early June to 1,081 in the week of July 27. Mid-August the US is largely on holiday, and almost nobody in Europe is sitting an exam. The retention curve went up over exactly those weeks.
+
+Retention rising while volume halves is the textbook shape of a mix shift. Fewer, more self-selected, more motivated people sign up in the summer, and the rate goes up without the product doing anything.
+
+There is one thing in the data that pushes back on that, and I want to give it its due without overselling it. The cohort of May 24 to May 30 was 1,704 signups and returned at 5.3%. The cohort of June 28 to July 4 was 1,789 signups and returned at 9.8%. Almost the same number of people, five weeks apart, nearly double the return. If smaller cohorts were mechanically more motivated, those two should look alike, and they do not.
+
+That is an argument, not a proof. Cohort size is one dimension of mix and not the interesting one, and I cannot see the others. So the fair summary is that the mix explanation is weaker than I first thought and still not ruled out, and both the activation jump and the retention lift are exposed to it.
+
+Here is the other half, which I did not think about until I was already writing the caveat.
+
+On the old product, around 70% of returns were exam-driven. In late July and August, that driver is switched off. There is no exam next week for most of these users. So anyone coming back in these particular weeks is coming back without the thing that used to do all the work.
+
+That is precisely the behaviour the rewrite was betting on. Which means the summer is simultaneously the worst season for measuring the size of the effect and, in one narrow respect, the most informative season for its existence.
+
+I cannot have both readings. Distinguishing them needs a same-season comparison, August 2026 against August 2025, and I cannot run it: signup tracking only starts on April 4, 2026, so no cohort older than that exists to compare against. I checked, specifically hoping the answer would be different.
+
+One more thing I wanted to measure and could not. The share of returns that are exam-driven came from an in-app survey, and that survey ran from April 10 to June 17 and is now closed. Of 52 post-rewrite respondents, 45 chose "new exam or material to study", but that is 52 self-selected people, the option conflates a new exam with new material, and there is no July data at all. I am not putting a percentage on exam-driven returns in this post, because I do not have one.
+
+---
+
+## What I am watching in October
+
+October is the first month with a real semester in it, which makes it the first honest test. I have written the predictions down in advance this time, which is the actual lesson of this post.
+
+Active days per user per thirty days, currently 1.20, should rise if the rhythm bet is real. If it sits at 1.3 in October with a full semester running, the bet failed and what I shipped was a better onboarding with an agent attached to it.
+
+Week-two strict retention for creators, currently 3.13%, should rise. The relative gap is already enormous and the absolute number is still tiny, and the absolute number is the one that decides whether this is a business.
+
+A properly powered version of the upload-first experiment, running long enough and balanced, so the selection question gets an answer instead of a shrug.
+
+And the activation rate should hold near 47% when signup volume comes back up. If it falls back toward 31% as the summer traffic mix reverts, then the activation win was mix, not product, and I will say so here.
+
+One more, and it is the one I got most wrong in the other direction. I have been saying for a year that cross-semester retention is close to zero, and while writing this post I finally measured it instead of asserting it. Of 9,312 users with more than one active day, **1,623 came back after a gap of eight weeks or more**. At twelve weeks it is still 1,162. That is not zero, and zero is what I have been telling people.
+
+I want to be careful with it, because it is a proxy and not a semester: it is a gap in activity rather than a registrar's calendar, and it counts a bare login as a return. The true number is somewhere below 1,623 and well above nothing. That is a wide range for the problem this blog has been circling since May, and it is still the first time anyone has measured it, including me.
+
+---
+
+## Where it leaves me
+
+It worked, and I cannot yet tell you exactly why.
+
+That is a better answer than I expected to be writing. The retention curve is roughly double what it was, at every week I can currently see, and the three cohorts before the cutover are flat enough that the change has a visible edge to it rather than a slope. Activation moved from about 31% to about 47% in one step I can point at on a calendar. Those are the two things the rewrite was supposed to do, even if only one of them was the thing I said out loud.
+
+The reasons I am still hedging are all specific. Day-one retention, the metric I actually promised, did not move at all. The one experiment that could separate cause from selection was too small to read. The season the data lives in supports two opposite stories. And I got here by measuring the right thing after the fact rather than deciding in advance what success would look like.
+
+The smaller thing I got wrong is the one I will actually carry. I have never had trouble admitting a number is bad. I have trouble deciding what the number should be before I look at it. Every conclusion in this post came from a split I ran after the fact, and I have no way of knowing how many other splits I would have found equally convincing if they had gone the other way.
+
+I will write the October one against predictions I made in August. If they miss, that post will be shorter and less flattering, and it will go up anyway.
+
+If you are building in applied AI, solo or close to it, I would like to hear from you. Find me at [studypdf.net](https://studypdf.net), [luishenrich.com](https://luishenrich.com), or [@luisnhenrich](https://x.com/luisnhenrich) on X.
