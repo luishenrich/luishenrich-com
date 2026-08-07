@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Luis Henrich-Bandis. 22, solo founder of StudyPDF (92,000 users), Master's student at RWTH Aachen.",
+    "Luis Henrich-Bandis. 23, founder. Building Lagias, and running StudyPDF at 100,000+ users."
 };
 
 export default function About() {
@@ -24,13 +24,12 @@ export default function About() {
           Luis Henrich-Bandis
         </h1>
         <p className="text-[13px] font-mono text-text-muted mb-7">
-          22 · Cologne · Master&rsquo;s at RWTH Aachen
+          23 · Cologne · Master&rsquo;s at RWTH Aachen
         </p>
 
         <p className="text-text-secondary mb-7">
-          Hi, I&rsquo;m Luis. I&rsquo;m 22, doing my Master&rsquo;s at RWTH
-          Aachen, and the last two years of my life have basically been one
-          thing:{" "}
+          Hi, I&rsquo;m Luis. I&rsquo;m 23, I build things, and the last two
+          years of my life have basically been one thing:{" "}
           <a
             href="https://studypdf.net"
             target="_blank"
@@ -42,9 +41,9 @@ export default function About() {
           .
         </p>
         <p className="text-text-secondary mb-7">
-          We started it in summer 2023. A friend, his exam prep, and ChatGPT
+          We started it in summer 2024. A friend, his exam prep, and ChatGPT
           failing at PDFs in spectacularly stupid ways. I built the first
-          version in three weeks. Two years later it&rsquo;s at 92,000 users
+          version in three weeks. Two years later it&rsquo;s at 100,000+ users
           across 200+ universities, around 600 daily actives, 150k+
           documents processed, and I run it solo from Cologne. I do all of it:
           the AI pipeline, the infra, the support emails, the SEO posts, the
@@ -81,9 +80,24 @@ export default function About() {
         <h2 className="text-xs uppercase tracking-[0.14em] text-text-muted font-medium mb-4">
           Currently
         </h2>
+        <p className="text-text-secondary mb-4">
+          Building{" "}
+          <a
+            href="https://lagias.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-text-primary border-b border-border hover:border-accent transition-colors"
+          >
+            Lagias
+          </a>{" "}
+          with Luca Wuerker. You describe an investment idea in plain English,
+          agents research it and write the backtest, and then a deterministic
+          harness with no AI anywhere in it grades the result on data the model
+          never saw. The AI proposes. The harness decides. Waitlist is open,
+          alpha invites start this month.
+        </p>
         <p className="text-text-secondary">
-          Open to AI Deployment / Forward Deployed Engineer conversations.
-          Happy to chat.
+          Still running StudyPDF alongside it.
         </p>
       </section>
 

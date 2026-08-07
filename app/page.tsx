@@ -12,12 +12,19 @@ const personJsonLd = {
   familyName: "Henrich-Bandis",
   url: "https://luishenrich.com",
   email: "hi@luishenrich.com",
-  jobTitle: "Solo Founder",
-  worksFor: {
-    "@type": "Organization",
-    name: "StudyPDF",
-    url: "https://studypdf.net",
-  },
+  jobTitle: "Founder",
+  worksFor: [
+    {
+      "@type": "Organization",
+      name: "Lagias",
+      url: "https://lagias.com",
+    },
+    {
+      "@type": "Organization",
+      name: "StudyPDF",
+      url: "https://studypdf.net",
+    },
+  ],
   alumniOf: {
     "@type": "EducationalOrganization",
     name: "RWTH Aachen University",
@@ -58,7 +65,16 @@ export default async function Home() {
           </h1>
         </div>
         <p className="text-text-secondary">
-          I&rsquo;m Luis. 22, Master&rsquo;s at RWTH Aachen, building{" "}
+          I&rsquo;m Luis. 23, founder, based in Cologne. I&rsquo;m building{" "}
+          <a
+            href="https://lagias.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-text-primary border-b border-border hover:border-accent transition-colors"
+          >
+            Lagias
+          </a>
+          , a quant research harness for retail traders, and I run{" "}
           <a
             href="https://studypdf.net"
             target="_blank"
@@ -67,8 +83,7 @@ export default async function Home() {
           >
             StudyPDF
           </a>{" "}
-          alone from Cologne. 92,000 users, 200+ universities, one
-          engineer.
+          solo at 100,000+ users across 200+ universities.
         </p>
         <p className="text-text-secondary mt-8">
           I write here when something&rsquo;s actually worth writing about.

@@ -25,11 +25,11 @@ export const metadata: Metadata = {
     template: "%s · Luis Henrich-Bandis",
   },
   description:
-    "Solo founder of StudyPDF. Master's student at RWTH Aachen. Notes on building products, engineering, and machine learning.",
+    "Founder. Building Lagias, and running StudyPDF at 100,000+ users. Notes on building products, applied AI, and what actually held up in production.",
   openGraph: {
     title: "Luis Henrich-Bandis",
     description:
-      "Solo founder of StudyPDF. Master's student at RWTH Aachen.",
+      "Founder. Building Lagias, and running StudyPDF at 100,000+ users.",
     url: "https://luishenrich.com",
     siteName: "Luis Henrich-Bandis",
     type: "website",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Luis Henrich-Bandis",
     description:
-      "Solo founder of StudyPDF. Master's student at RWTH Aachen.",
+      "Founder. Building Lagias, and running StudyPDF at 100,000+ users.",
   },
   alternates: {
     types: {
