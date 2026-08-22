@@ -1,0 +1,46 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="'Nunito', system-ui, sans-serif">
+  <rect x="0" y="0" width="800" height="500" rx="24" fill="#F7F4E3"/>
+  <text x="48" y="52" font-family="'Fraunces', Georgia, serif" font-size="30" fill="#251F1A">Flashcards: quality vs wait</text>
+  <text x="48" y="76" font-size="15" fill="#251F1A" fill-opacity="0.55">The useful region is the left. Everything past ~40s is a batch job.</text>
+  <line x1="86" y1="400" x2="770" y2="400" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="333" x2="770" y2="333" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="265" x2="770" y2="265" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="198" x2="770" y2="198" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="130" x2="770" y2="130" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <g font-size="12" fill="#251F1A" fill-opacity="0.45" text-anchor="end">
+    <text x="88" y="404">0</text>
+    <text x="88" y="337">0.25</text>
+    <text x="88" y="269">0.50</text>
+    <text x="88" y="202">0.75</text>
+    <text x="88" y="134">1.00</text>
+  </g>
+  <g font-size="12" fill="#251F1A" fill-opacity="0.45" text-anchor="middle">
+    <text x="100" y="428">0s</text>
+    <text x="260" y="428">80s</text>
+    <text x="420" y="428">160s</text>
+    <text x="580" y="428">240s</text>
+    <text x="740" y="428">320s</text>
+  </g>
+  <circle cx="123.4" cy="381.1" r="5" fill="#1D4B3A" stroke="#251F1A" stroke-width="2" opacity="0.92"><title>luna@off</title></circle>
+  <circle cx="135.6" cy="332.5" r="6" fill="#1D4B3A" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>luna@low</title></circle>
+  <circle cx="142.8" cy="251.5" r="7" fill="#1D4B3A" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>luna@medium</title></circle>
+  <circle cx="255.2" cy="281.2" r="8" fill="#1D4B3A" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>luna@high</title></circle>
+  <circle cx="448.2" cy="251.5" r="9" fill="#1D4B3A" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>luna@xhigh</title></circle>
+  <circle cx="712.8" cy="167.8" r="10" fill="#1D4B3A" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>luna@max</title></circle>
+  <circle cx="127.6" cy="281.2" r="5" fill="#251F1A" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>terra@off</title></circle>
+  <circle cx="127.6" cy="324.4" r="6" fill="#251F1A" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>terra@low</title></circle>
+  <circle cx="135.6" cy="316.3" r="7" fill="#251F1A" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>terra@medium</title></circle>
+  <circle cx="183.8" cy="267.7" r="8" fill="#251F1A" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>terra@high</title></circle>
+  <circle cx="232.2" cy="275.8" r="9" fill="#251F1A" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>terra@xhigh</title></circle>
+  <circle cx="638.8" cy="305.5" r="10" fill="#251F1A" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>terra@max</title></circle>
+  <circle cx="136.8" cy="232.6" r="5" fill="#FFBC14" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>sol@off</title></circle>
+  <circle cx="144.2" cy="192.1" r="6" fill="#FFBC14" stroke="#251F1A" stroke-width="2" opacity="0.92"><title>sol@low</title></circle>
+  <circle cx="183.8" cy="227.2" r="7" fill="#FFBC14" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>sol@medium</title></circle>
+  <circle cx="278.0" cy="243.4" r="8" fill="#FFBC14" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>sol@high</title></circle>
+  <circle cx="393.0" cy="205.6" r="9" fill="#FFBC14" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>sol@xhigh</title></circle>
+  <circle cx="578.2" cy="243.4" r="10" fill="#FFBC14" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>sol@max</title></circle>
+  <text x="156.2" y="184.1" font-size="13" fill="#251F1A" font-weight="600">sol@low</text>
+  <text x="704.8" y="155.8" text-anchor="end" font-size="13" fill="#1D4B3A" font-weight="600">luna@max · 306s</text>
+  <text x="400" y="448" text-anchor="middle" font-size="13" fill="#251F1A" fill-opacity="0.55">Draft p50 (seconds) · bigger dot = more thinking</text>
+  <text x="48" y="461" font-size="12.5" fill="#251F1A" fill-opacity="0.5">luna@max has the highest flashcard win (0.86) and takes five minutes. That is not a product default.</text>
+</svg>

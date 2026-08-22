@@ -1,0 +1,37 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="'Nunito', system-ui, sans-serif">
+  <rect x="0" y="0" width="800" height="500" rx="24" fill="#F7F4E3"/>
+  <text x="48" y="52" font-family="'Fraunces', Georgia, serif" font-size="30" fill="#251F1A">The real lever: research more of the course</text>
+  <text x="48" y="76" font-size="15" fill="#251F1A" fill-opacity="0.55">Blind scores, 1 to 5. Same drafter (sol@low). Two ways to gather evidence.</text>
+  <line x1="86" y1="400" x2="770" y2="400" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="338" x2="770" y2="338" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="275" x2="770" y2="275" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="213" x2="770" y2="213" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="150" x2="770" y2="150" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <g font-size="12" fill="#251F1A" fill-opacity="0.45" text-anchor="end">
+    <text x="76" y="404">3.0</text>
+    <text x="76" y="342">3.5</text>
+    <text x="76" y="279">4.0</text>
+    <text x="76" y="217">4.5</text>
+    <text x="76" y="154">5.0</text>
+  </g>
+    <rect x="112" y="301.3" width="24" height="98.8" rx="5" fill="#251F1A" fill-opacity="0.35"/>
+  <rect x="142" y="270.0" width="24" height="130.0" rx="5" fill="#FFBC14"/>
+  <text x="140" y="428" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.6">grounding</text>
+  <rect x="242" y="290.0" width="24" height="110.0" rx="5" fill="#251F1A" fill-opacity="0.35"/>
+  <rect x="272" y="176.3" width="24" height="223.8" rx="5" fill="#FFBC14"/>
+  <text x="270" y="428" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.6">coverage</text>
+  <rect x="372" y="358.8" width="24" height="41.3" rx="5" fill="#251F1A" fill-opacity="0.35"/>
+  <rect x="402" y="222.5" width="24" height="177.5" rx="5" fill="#FFBC14"/>
+  <text x="400" y="428" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.6">item quality</text>
+  <rect x="502" y="311.3" width="24" height="88.8" rx="5" fill="#251F1A" fill-opacity="0.35"/>
+  <rect x="532" y="227.5" width="24" height="172.5" rx="5" fill="#FFBC14"/>
+  <text x="530" y="428" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.6">difficulty</text>
+  <rect x="632" y="352.5" width="24" height="47.5" rx="5" fill="#251F1A" fill-opacity="0.35"/>
+  <rect x="662" y="207.5" width="24" height="192.5" rx="5" fill="#FFBC14"/>
+  <text x="660" y="428" text-anchor="middle" font-size="12.5" fill="#251F1A" fill-opacity="0.6">study value</text>
+  <g transform="translate(500,112)">
+    <rect x="0" y="-8" width="12" height="12" rx="3" fill="#251F1A" fill-opacity="0.35"/><text x="18" y="2" font-size="13" fill="#251F1A">single pass</text>
+    <rect x="130" y="-8" width="12" height="12" rx="3" fill="#FFBC14"/><text x="148" y="2" font-size="13" fill="#251F1A">fan-out</text>
+  </g>
+  <text x="48" y="461" font-size="12.5" fill="#251F1A" fill-opacity="0.5">21 of 24 blind panel wins for fan-out. Coverage 3.88 to 4.79. Item quality 3.33 to 4.42. Draft time unchanged.</text>
+</svg>

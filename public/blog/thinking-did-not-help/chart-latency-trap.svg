@@ -1,0 +1,43 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="'Nunito', system-ui, sans-serif">
+  <rect x="0" y="0" width="800" height="500" rx="24" fill="#F7F4E3"/>
+  <text x="48" y="52" font-family="'Fraunces', Georgia, serif" font-size="30" fill="#251F1A">Thinking past low is a latency trap</text>
+  <text x="48" y="76" font-size="15" fill="#251F1A" fill-opacity="0.55">sol flashcards, 15 cards, p50 wall-clock. Same prompt. Same research bundle.</text>
+  <line x1="86" y1="400" x2="770" y2="400" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="346" x2="770" y2="346" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="292" x2="770" y2="292" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="238" x2="770" y2="238" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="184" x2="770" y2="184" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="130" x2="770" y2="130" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <g font-size="12" fill="#251F1A" fill-opacity="0.45" text-anchor="end">
+    <text x="76" y="404">0s</text>
+    <text x="76" y="350">50s</text>
+    <text x="76" y="296">100s</text>
+    <text x="76" y="242">150s</text>
+    <text x="76" y="188">200s</text>
+    <text x="76" y="134">250s</text>
+  </g>
+  <path fill="none" stroke="#FFBC14" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" d="M 110,380.9 L 230,377.1 L 350,356.5 L 470,307.6 L 590,247.9 L 710,151.7"/>
+    <circle cx="110" cy="380.9" r="6" fill="#FFBC14" stroke="#F7F4E3" stroke-width="2"/>
+  <text x="110" y="366.89230769230767" text-anchor="middle" font-size="14" fill="#251F1A" fill-opacity="0.85">18s</text>
+  <circle cx="230" cy="377.1" r="6" fill="#FFBC14" stroke="#F7F4E3" stroke-width="2"/>
+  <text x="230" y="363.05" text-anchor="middle" font-size="14" fill="#251F1A" fill-opacity="0.85">22s</text>
+  <circle cx="350" cy="356.5" r="6" fill="#FFBC14" stroke="#F7F4E3" stroke-width="2"/>
+  <text x="350" y="342.48846153846154" text-anchor="middle" font-size="14" fill="#251F1A" fill-opacity="0.85">42s</text>
+  <circle cx="470" cy="307.6" r="6" fill="#FFBC14" stroke="#F7F4E3" stroke-width="2"/>
+  <text x="470" y="293.5769230769231" text-anchor="middle" font-size="14" fill="#251F1A" fill-opacity="0.85">89s</text>
+  <circle cx="590" cy="247.9" r="6" fill="#FFBC14" stroke="#F7F4E3" stroke-width="2"/>
+  <text x="590" y="233.8653846153846" text-anchor="middle" font-size="14" fill="#251F1A" fill-opacity="0.85">147s</text>
+  <circle cx="710" cy="151.7" r="6" fill="#FFBC14" stroke="#F7F4E3" stroke-width="2"/>
+  <text x="710" y="137.70384615384614" text-anchor="middle" font-size="14" fill="#251F1A" fill-opacity="0.85">239s</text>
+  <g font-size="13" fill="#251F1A" fill-opacity="0.6" text-anchor="middle">
+    <text x="110" y="428">off</text>
+    <text x="230" y="428">low</text>
+    <text x="350" y="428">medium</text>
+    <text x="470" y="428">high</text>
+    <text x="590" y="428">xhigh</text>
+    <text x="710" y="428">max</text>
+  </g>
+  <line x1="86" y1="377.1" x2="770" y2="377.1" stroke="#1D4B3A" stroke-dasharray="5 5" stroke-opacity="0.6"/>
+  <text x="640" y="398" font-size="12" fill="#1D4B3A">prod @low</text>
+  <text x="48" y="461" font-size="12.5" fill="#251F1A" fill-opacity="0.5">luna and terra at max take 270 to 306 seconds. Quality does not climb with them. Never ship high / xhigh / max as a default.</text>
+</svg>

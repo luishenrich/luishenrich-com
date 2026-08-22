@@ -1,0 +1,49 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="'Nunito', system-ui, sans-serif">
+  <rect x="0" y="0" width="800" height="500" rx="24" fill="#F7F4E3"/>
+  <text x="48" y="52" font-family="'Fraunces', Georgia, serif" font-size="30" fill="#251F1A">Artifacts: sol wins. luna and terra do not.</text>
+  <text x="48" y="76" font-size="15" fill="#251F1A" fill-opacity="0.55">Pooled flashcard win by thinking budget · 159 blind verdicts</text>
+  <line x1="86" y1="400" x2="770" y2="400" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="333" x2="770" y2="333" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="265" x2="770" y2="265" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="198" x2="770" y2="198" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="130" x2="770" y2="130" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <g font-size="12" fill="#251F1A" fill-opacity="0.45" text-anchor="end">
+    <text x="76" y="404">0</text>
+    <text x="76" y="337">0.25</text>
+    <text x="76" y="269">0.50</text>
+    <text x="76" y="202">0.75</text>
+    <text x="76" y="134">1.00</text>
+  </g>
+  <rect x="120" y="381.1" width="22" height="18.9" rx="5" fill="#1D4B3A"/>
+  <rect x="220" y="332.5" width="22" height="67.5" rx="5" fill="#1D4B3A"/>
+  <rect x="320" y="251.5" width="22" height="148.5" rx="5" fill="#1D4B3A"/>
+  <rect x="420" y="281.2" width="22" height="118.8" rx="5" fill="#1D4B3A"/>
+  <rect x="520" y="251.5" width="22" height="148.5" rx="5" fill="#1D4B3A"/>
+  <rect x="620" y="167.8" width="22" height="232.2" rx="5" fill="#1D4B3A"/>
+  <rect x="146" y="281.2" width="22" height="118.8" rx="5" fill="#251F1A"/>
+  <rect x="246" y="324.4" width="22" height="75.6" rx="5" fill="#251F1A"/>
+  <rect x="346" y="316.3" width="22" height="83.7" rx="5" fill="#251F1A"/>
+  <rect x="446" y="267.7" width="22" height="132.3" rx="5" fill="#251F1A"/>
+  <rect x="546" y="275.8" width="22" height="124.2" rx="5" fill="#251F1A"/>
+  <rect x="646" y="305.5" width="22" height="94.5" rx="5" fill="#251F1A"/>
+  <rect x="172" y="232.6" width="22" height="167.4" rx="5" fill="#FFBC14"/>
+  <rect x="272" y="192.1" width="22" height="207.9" rx="5" fill="#FFBC14"/>
+  <rect x="372" y="227.2" width="22" height="172.8" rx="5" fill="#FFBC14"/>
+  <rect x="472" y="243.4" width="22" height="156.6" rx="5" fill="#FFBC14"/>
+  <rect x="572" y="205.6" width="22" height="194.4" rx="5" fill="#FFBC14"/>
+  <rect x="672" y="243.4" width="22" height="156.6" rx="5" fill="#FFBC14"/>
+  <g font-size="13" fill="#251F1A" fill-opacity="0.6" text-anchor="middle">
+    <text x="142" y="428">off</text>
+    <text x="242" y="428">low</text>
+    <text x="342" y="428">medium</text>
+    <text x="442" y="428">high</text>
+    <text x="542" y="428">xhigh</text>
+    <text x="642" y="428">max</text>
+  </g>
+  <g transform="translate(480,110)">
+    <rect x="0" y="-8" width="12" height="12" rx="3" fill="#1D4B3A"/><text x="18" y="2" font-size="13" fill="#251F1A">luna 0.45</text>
+    <rect x="110" y="-8" width="12" height="12" rx="3" fill="#251F1A"/><text x="128" y="2" font-size="13" fill="#251F1A">terra 0.39</text>
+    <rect x="230" y="-8" width="12" height="12" rx="3" fill="#FFBC14"/><text x="248" y="2" font-size="13" fill="#251F1A">sol 0.65</text>
+  </g>
+  <text x="48" y="461" font-size="12.5" fill="#251F1A" fill-opacity="0.5">Quiz tells the same story: sol 0.67, terra 0.44, luna 0.40. sol@low is the top config in its budget panels (1.00 win on cards).</text>
+</svg>

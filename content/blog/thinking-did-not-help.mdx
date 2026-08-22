@@ -1,0 +1,194 @@
+export const meta = {
+  title: "Arena rankings will not pick your model. Your product will.",
+  date: "2026-08-22",
+  description:
+    "I ran 18 gpt-5.6 configs through the real StudyPDF agent. Public benches would have picked a different winner. The useful bench is the one that looks like your company.",
+};
+
+![Arena rankings will not pick your model. Your product will. · Luis Henrich-Bandis](/blog/thinking-did-not-help/hero.svg)
+
+Every month a new frontier model shows up, and a new open-source one right behind it. The public benches update. Someone posts a chart. The comments decide a winner.
+
+I do not ship that winner.
+
+I run a study agent on other people's lectures. The job is not "be clever on the internet." It is pick the right tool, stay inside the course, write cards a student can actually use, and do it before they close the tab. A general bench is still a use case. It is just not mine.
+
+So I built a bench that looks like the product. This week it was gpt-5.6, three sizes, six thinking budgets. Next month it will be whatever lands. The models change. The method does not.
+
+The result this time: **the ranking you would copy from a leaderboard is wrong for Bo.** Chat does not want the big model. Artifacts do. More thinking does not help either job. Reading more of the course does.
+
+I am not publishing prices. Quality and wait are the numbers that change what I ship.
+
+---
+
+## Why a public bench lies to you
+
+A public bench answers a question I am not asking. Can this model write a better essay. Can it pass a coding test. Can it plan a trip. Those are real tasks. They are also someone else's product.
+
+Bo has a 22,000-token system prompt, a Researcher that searches a course graph, and tools that have to fire with the right arguments. "Quiz me on lecture three, five more, harder" is not MMLU. "Write 15 cards from this evidence pack and do not invent a page" is not a chatbot arena.
+
+Two things fall out of that.
+
+First, the best model is local. Best for chat on my stack is not best for drafting. Best for drafting is not best for research. If I pick one winner for the whole product I am already wrong.
+
+Second, the only way to know is to run the real path. Same prompt. Same tools. Same courses. Blind judges that have never seen the family under test. I will keep doing this every time a new model shows up, open-source or frontier. Otherwise I am picking from a chart that was not drawn for StudyPDF.
+
+This run is the example. Not the last one.
+
+---
+
+## What I actually ran
+
+Eighteen configs: gpt-5.6 luna, terra, sol, each at off, low, medium, high, xhigh, max. The real Bo prompt. The real tools. A live Researcher. Two real courses.
+
+Chat: 10 scenarios on a finance course (396 turns), then a grounded rerun on a searchable ML course (144 turns). Counts, difficulty, vague scope, "five more, harder", off-topic, explain this from the lecture. Two reps each.
+
+Artifacts: 3 documents × flashcards + quiz × 18 configs × 2 reps. 216 drafts. Same frozen research bundle for every drafter, so the only variable is the model.
+
+Then a separate A/B on how research is gathered. Single pass versus fan-out (one pass per topic, in parallel, plus a deterministic evidence index). 16 runs, drafted with the current prod config.
+
+Judges: DeepSeek V4 Pro, Grok 4.5, Kimi K3. Position-rotated panels. Win is a normalised rank, 1 if they came first in their panel, 0 if last. That number is comparable across panel sizes. Raw rank is not.
+
+One caveat I found mid-run and will say once: the finance course has no vectors in the dev index. Every "grounded" answer there was general knowledge plus honesty about having no evidence. I threw that set out for quality. The ML course is the one that counts.
+
+---
+
+## Chat: the leaderboard model does not win
+
+On a public bench I would have reached for the largest config and turned thinking up. On my chat path that is wasted motion.
+
+Tool use first, because I thought this is where a bigger model would pull away.
+
+![Tool reliability: 540 of 540 turns passed](/blog/thinking-did-not-help/chart-tool-pass.svg)
+
+*Right tool, right arguments, on the real Bo prompt. Every config. Counts, difficulty, scope, ask-when-vague, append-harder.*
+
+540 turns. 100% scenario pass. Zero schema errors. Zero exceptions. The small model with thinking off picked `ask_researcher` when it should, `ask_user` when the scope was vague, and appended harder cards when I said "5 more, harder." So did every other config. Model and budget did not move this. If your agent is mostly tool routing, a frontier ranking will sell you a model you do not need.
+
+Then prose quality, on the ML course, judged blind.
+
+![Chat quality is flat across thinking budgets](/blog/thinking-did-not-help/chart-chat-win-flat.svg)
+
+*Pooled win on grounded ML questions. Three judges. 106 verdicts. The coin-flip line is 0.50.*
+
+luna 0.50, terra 0.48, sol 0.52. By budget: off 0.51, low 0.51, medium 0.47, high 0.53, xhigh 0.47, max 0.51. That is noise. terra@high spikes to 0.75 on 24 verdicts. I am not leaving the small model for a spike.
+
+I stared at the notes. The judges were not describing different products. They were ranking the same honest, lecture-tied answers in a slightly different order.
+
+Grounding (1 to 5) is the same picture. Most configs land between 4.5 and 4.9. The only real drop is sol at xhigh, 3.45, which is the opposite of what a "smarter" ranking is supposed to buy.
+
+---
+
+## The clock is the Researcher, not the model
+
+Time-to-first-token on a research question is 15 to 20 seconds for almost every config. That is not the model thinking. That is the Researcher going and reading. A public speed bench would have ranked the model. My users wait on the search.
+
+![Chat quality versus time-to-first-token](/blog/thinking-did-not-help/chart-chat-scatter.svg)
+
+*Bigger dot means more thinking. The cluster is a band, not a frontier.*
+
+The model's own latency, time to the first tool call on that 22k prompt, is 3 to 6 seconds. luna@off is 3.2 seconds. max adds a couple of seconds and nothing else.
+
+Split the path and the floor shows up.
+
+![The model is fast. The Researcher is not.](/blog/thinking-did-not-help/chart-research-floor.svg)
+
+*Dashed is an off-topic answer with no tools. Solid is a grounded question. The gap is the Researcher.*
+
+Off-topic lands in 2 to 4 seconds. Ask something that needs the lecture and you wait ~10 extra seconds, then the model talks. sol@max on the research path is 74 seconds. That is a worse product, not a smarter one.
+
+If I want chat to feel faster, I do not buy the model a leaderboard just crowned. I make the Researcher thinner.
+
+---
+
+## Artifacts: now the bigger model actually wins
+
+This is why you do not pick one model for the company. The same family, same week, same judges: chat was flat, drafting was not.
+
+![Artifact win by model and thinking budget](/blog/thinking-did-not-help/chart-artifact-win.svg)
+
+*Flashcards, pooled win. Quiz is the same shape: sol 0.67, terra 0.44, luna 0.40.*
+
+sol 0.65, luna 0.45, terra 0.39. The large model is clearly the best drafter. Budget above low is a much weaker story. Flashcard marginals go 0.38 at off to 0.60 at max, and most of that climb is luna and terra catching up to sol, not sol getting better. sol@low is the top config in its budget panels. Win of 1.00 on cards.
+
+I will keep artifacts on sol@low. That is a different winner than chat. A single "best model" slide would have hidden that.
+
+The plot I keep coming back to is wait versus quality.
+
+![Flashcards: quality versus wait](/blog/thinking-did-not-help/chart-artifact-scatter.svg)
+
+*The useful region is the left. Everything past about 40 seconds is a batch job.*
+
+sol@low sits at 22 seconds and 0.77 win. luna@max has the highest flashcard win in the whole grid, 0.86, and takes 306 seconds. Five minutes for fifteen cards. That is a Sunday-night job, not a thing you ask Bo for between two lectures.
+
+Thinking past low is the trap. A bench that only scores the final cards, and ignores the wait, would have shipped max.
+
+![Thinking past low is a latency trap](/blog/thinking-did-not-help/chart-latency-trap.svg)
+
+*sol, 15 cards, same prompt, same research bundle. 18 seconds at off. 22 at low. 239 at max.*
+
+luna and terra at max take 270 to 306 seconds. The extra time is reasoning tokens. Output speed stays around 70 to 110 tokens a second. The model is not slower. It is writing a novel to itself before it writes the cards.
+
+I am not shipping high, xhigh, or max as a default. Not for chat. Not for artifacts.
+
+---
+
+## The one exception I am not acting on
+
+Quiz is the only place sol@low looks weak.
+
+![sol quiz win by thinking budget](/blog/thinking-did-not-help/chart-quiz-exception.svg)
+
+*0.48 at low, 0.61 at medium, 0.93 at xhigh. Three documents. Consistent across judges.*
+
+Small n. I would run more docs before I flip quiz to medium. Twelve extra seconds and a better mix of question types is plausible. I am not going to change prod on three PDFs. That is also the method: a number that is not yours yet stays a hypothesis.
+
+---
+
+## The lever that actually moved quality
+
+I also A/B'd how research is gathered. Same drafter (sol@low). Two ways to build the evidence pack.
+
+Single pass: one Researcher loop, cap 12 steps, Gemini Flash Lite. Fan-out: one luna pass per topic, in parallel, plus a deterministic evidence index. This A/B changes two things at once (structure and which model does the reading). Both ship together. I cannot tell you which half did the work.
+
+No public bench measures this. It is not a model swap. It is a change in what the model is allowed to read, on my course graph. That is company-specific by definition.
+
+The judges can tell you which bundle they preferred.
+
+![21 of 24 judges picked fan-out](/blog/thinking-did-not-help/chart-fanout-wins.svg)
+
+*Four specs, three judges, two reps. Two candidates per panel.*
+
+21 of 24. Per spec: 5-1, 6-0, 6-0, 4-2. The five-topic spec is a shutout. Single names 3 of 5 topics in the bundle. Fan-out names all five.
+
+The dimensions are not subtle.
+
+![Judge dimensions, single pass versus fan-out](/blog/thinking-did-not-help/chart-fanout-dims.svg)
+
+*Same drafter. Coverage 3.88 to 4.79. Item quality 3.33 to 4.42. Study value 3.38 to 4.54. Grounding barely moves, 3.79 to 4.04.*
+
+Draft time is unchanged, about 30 seconds. Research goes from 7 seconds to 34. Passages in the bundle go from 7 to 39. The judges' words are the useful part. Single: "near-duplicate cards, narrower, too little on topic 3." Fan-out: "spans all three files, evenly varied concepts, no duplicates."
+
+That is the quality lever on this product. Not the SKU. Not the thinking slider. More of the course, in the pack the drafter actually sees.
+
+The wait is real. I can claw about 10 seconds by dropping the per-topic step cap from 7 to 5. I have not done that yet.
+
+---
+
+## What I shipped, and what I will run again
+
+Shipped, after this:
+
+1. Chat stays luna@off.
+2. Artifacts stay sol@low.
+3. Fan-out research goes on.
+
+I did not bench exam, study guide, or cheat sheet drafters. Only flashcards and quiz. I did not bench the `-pro` serving variants. I did not watch this under prod load. The chat bench is two turns of memory, not a semester. Fan-out ran without mastery data in the learner-state block (a limit bug, since fixed).
+
+The point is not "luna won, we are done." The point is I now have a path I can rerun. New GPT drop. New open-source model that looks free and fast on a public chart. New thinking budget. Same scenarios, same courses, same judges. If it wins on Bo, it ships. If it wins on someone else's leaderboard, it waits.
+
+If you take one thing: **the best model is the one that wins on your workload.** A public bench is a starting rumor. Your product is the test.
+
+I wrote earlier about [rewriting the product around Bo](/blog/the-bo-rewrite) and about [whether that bet moved retention](/blog/did-the-bet-work). This is the unglamorous follow-up. Same agent. Now I know how I will pick the next model for it.
+
+If you already run a bench that looks like your company, I want to hear how you built it. Find me at [studypdf.net](https://studypdf.net), [luishenrich.com](https://luishenrich.com), or [@luisnhenrich](https://x.com/luisnhenrich) on X.

@@ -1,0 +1,55 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="'Nunito', system-ui, sans-serif">
+  <rect x="0" y="0" width="800" height="500" rx="24" fill="#F7F4E3"/>
+  <text x="48" y="52" font-family="'Fraunces', Georgia, serif" font-size="30" fill="#251F1A">Chat quality is flat across thinking budgets</text>
+  <text x="48" y="76" font-size="15" fill="#251F1A" fill-opacity="0.55">Pooled win on grounded ML questions · 1 = ranked first in a blind panel</text>
+  <line x1="86" y1="400" x2="770" y2="400" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="335" x2="770" y2="335" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="270" x2="770" y2="270" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="205" x2="770" y2="205" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="140" x2="770" y2="140" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <g font-size="12" fill="#251F1A" fill-opacity="0.45" text-anchor="end">
+    <text x="76" y="404">0.20</text>
+    <text x="76" y="339">0.35</text>
+    <text x="76" y="274">0.50</text>
+    <text x="76" y="209">0.65</text>
+    <text x="76" y="144">0.80</text>
+  </g>
+  <line x1="86" y1="270.0" x2="770" y2="270.0" stroke="#251F1A" stroke-opacity="0.25" stroke-dasharray="5 5"/>
+  <text x="700" y="258" font-size="12" fill="#251F1A" fill-opacity="0.45">coin flip</text>
+  <path fill="none" stroke="#1D4B3A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M 110,239.7 L 230,235.3 L 350,313.3 L 470,326.3 L 590,257.0 L 710,239.7"/>
+  <circle cx="110" cy="239.7" r="6" fill="#1D4B3A" stroke="#F7F4E3" stroke-width="2"/>
+  <circle cx="230" cy="235.3" r="6" fill="#1D4B3A" stroke="#F7F4E3" stroke-width="2"/>
+  <circle cx="350" cy="313.3" r="6" fill="#1D4B3A" stroke="#F7F4E3" stroke-width="2"/>
+  <circle cx="470" cy="326.3" r="6" fill="#1D4B3A" stroke="#F7F4E3" stroke-width="2"/>
+  <circle cx="590" cy="257.0" r="6" fill="#1D4B3A" stroke="#F7F4E3" stroke-width="2"/>
+  <circle cx="710" cy="239.7" r="6" fill="#1D4B3A" stroke="#F7F4E3" stroke-width="2"/>
+  <path fill="none" stroke="#251F1A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M 110,287.3 L 230,365.3 L 350,296.0 L 470,161.7 L 590,278.7 L 710,283.0"/>
+  <circle cx="110" cy="287.3" r="6" fill="#251F1A" stroke="#F7F4E3" stroke-width="2"/>
+  <circle cx="230" cy="365.3" r="6" fill="#251F1A" stroke="#F7F4E3" stroke-width="2"/>
+  <circle cx="350" cy="296.0" r="6" fill="#251F1A" stroke="#F7F4E3" stroke-width="2"/>
+  <circle cx="470" cy="161.7" r="6" fill="#251F1A" stroke="#F7F4E3" stroke-width="2"/>
+  <circle cx="590" cy="278.7" r="6" fill="#251F1A" stroke="#F7F4E3" stroke-width="2"/>
+  <circle cx="710" cy="283.0" r="6" fill="#251F1A" stroke="#F7F4E3" stroke-width="2"/>
+  <path fill="none" stroke="#FFBC14" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" d="M 110,274.3 L 230,187.7 L 350,239.7 L 470,287.3 L 590,313.3 L 710,270.0"/>
+  <circle cx="110" cy="274.3" r="6" fill="#FFBC14" stroke="#F7F4E3" stroke-width="2"/>
+  <circle cx="230" cy="187.7" r="6" fill="#FFBC14" stroke="#F7F4E3" stroke-width="2"/>
+  <circle cx="350" cy="239.7" r="6" fill="#FFBC14" stroke="#F7F4E3" stroke-width="2"/>
+  <circle cx="470" cy="287.3" r="6" fill="#FFBC14" stroke="#F7F4E3" stroke-width="2"/>
+  <circle cx="590" cy="313.3" r="6" fill="#FFBC14" stroke="#F7F4E3" stroke-width="2"/>
+  <circle cx="710" cy="270.0" r="6" fill="#FFBC14" stroke="#F7F4E3" stroke-width="2"/>
+  <g font-size="13" fill="#251F1A" fill-opacity="0.6" text-anchor="middle">
+    <text x="110" y="428">off</text>
+    <text x="230" y="428">low</text>
+    <text x="350" y="428">medium</text>
+    <text x="470" y="428">high</text>
+    <text x="590" y="428">xhigh</text>
+    <text x="710" y="428">max</text>
+  </g>
+  <g transform="translate(480,110)">
+    <circle cx="8" cy="0" r="5.5" fill="#1D4B3A"/><text x="24" y="4" font-size="14" fill="#251F1A" font-weight="600">luna</text>
+    <circle cx="100" cy="0" r="5.5" fill="#251F1A"/><text x="116" y="4" font-size="14" fill="#251F1A" font-weight="600">terra</text>
+    <circle cx="200" cy="0" r="5.5" fill="#FFBC14"/><text x="216" y="4" font-size="14" fill="#251F1A" font-weight="600">sol</text>
+  </g>
+  <text x="48" y="461" font-size="12.5" fill="#251F1A" fill-opacity="0.5">Win = normalised blind-panel rank. Three judges, none of them the family under test. 106 verdicts.</text>
+  <text x="48" y="478" font-size="12.5" fill="#251F1A" fill-opacity="0.5">Marginals by model: luna 0.50 · terra 0.48 · sol 0.52. By budget: 0.51 / 0.51 / 0.47 / 0.53 / 0.47 / 0.51.</text>
+</svg>

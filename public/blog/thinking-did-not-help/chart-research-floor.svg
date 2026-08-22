@@ -1,0 +1,40 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="'Nunito', system-ui, sans-serif">
+  <rect x="0" y="0" width="800" height="500" rx="24" fill="#F7F4E3"/>
+  <text x="48" y="52" font-family="'Fraunces', Georgia, serif" font-size="30" fill="#251F1A">The model is fast. The Researcher is not.</text>
+  <text x="48" y="76" font-size="15" fill="#251F1A" fill-opacity="0.55">Dashed = no-tool TTFT. Solid = research-path TTFT (Researcher included).</text>
+  <line x1="86" y1="400" x2="770" y2="400" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="333" x2="770" y2="333" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="265" x2="770" y2="265" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="198" x2="770" y2="198" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="130" x2="770" y2="130" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <g font-size="12" fill="#251F1A" fill-opacity="0.45" text-anchor="end">
+    <text x="76" y="404">0s</text>
+    <text x="76" y="337">20s</text>
+    <text x="76" y="269">40s</text>
+    <text x="76" y="202">60s</text>
+    <text x="76" y="134">80s</text>
+  </g>
+  <path fill="none" stroke="#1D4B3A" stroke-width="2.8" stroke-linecap="round" stroke-dasharray="6 5" d="M 110,392.2 L 230,392.6 L 350,384.1 L 470,384.8 L 590,363.6 L 710,358.5"/>
+  <path fill="none" stroke="#1D4B3A" stroke-width="2.8" stroke-linecap="round"  d="M 110,357.5 L 230,350.1 L 350,314.6 L 470,299.4 L 590,290.0 L 710,258.9"/>
+  <path fill="none" stroke="#FFBC14" stroke-width="2.8" stroke-linecap="round" stroke-dasharray="6 5" d="M 110,392.6 L 230,387.2 L 350,383.8 L 470,380.8 L 590,372.0 L 710,360.2"/>
+  <path fill="none" stroke="#FFBC14" stroke-width="2.8" stroke-linecap="round"  d="M 110,358.5 L 230,315.6 L 350,310.6 L 470,292.7 L 590,265.3 L 710,150.3"/>
+  <g font-size="13" fill="#251F1A" fill-opacity="0.6" text-anchor="middle">
+    <text x="110" y="428">off</text>
+    <text x="230" y="428">low</text>
+    <text x="350" y="428">medium</text>
+    <text x="470" y="428">high</text>
+    <text x="590" y="428">xhigh</text>
+    <text x="710" y="428">max</text>
+  </g>
+  <g transform="translate(420,112)">
+    <line x1="0" y1="0" x2="22" y2="0" stroke="#1D4B3A" stroke-width="2.8" stroke-dasharray="6 5"/>
+    <text x="30" y="4" font-size="13" fill="#251F1A">luna no-tool</text>
+    <line x1="160" y1="0" x2="182" y2="0" stroke="#1D4B3A" stroke-width="2.8"/>
+    <text x="190" y="4" font-size="13" fill="#251F1A">luna research</text>
+    <line x1="0" y1="24" x2="22" y2="24" stroke="#FFBC14" stroke-width="2.8" stroke-dasharray="6 5"/>
+    <text x="30" y="28" font-size="13" fill="#251F1A">sol no-tool</text>
+    <line x1="160" y1="24" x2="182" y2="24" stroke="#FFBC14" stroke-width="2.8"/>
+    <text x="190" y="28" font-size="13" fill="#251F1A">sol research</text>
+  </g>
+  <text x="48" y="461" font-size="12.5" fill="#251F1A" fill-opacity="0.5">Off-topic answers land in 2 to 4 seconds. Grounded ones wait ~10 seconds on the Researcher, then the model.</text>
+</svg>

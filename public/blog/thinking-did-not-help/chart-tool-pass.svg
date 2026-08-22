@@ -1,0 +1,16 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="'Nunito', system-ui, sans-serif">
+  <rect x="0" y="0" width="800" height="500" rx="24" fill="#F7F4E3"/>
+  <text x="48" y="52" font-family="'Fraunces', Georgia, serif" font-size="30" fill="#251F1A">Tool reliability: 540 of 540 turns</text>
+  <text x="48" y="76" font-size="15" fill="#251F1A" fill-opacity="0.55">Right tool, right args, on the real Bo prompt. Every config.</text>
+  <text x="400" y="250" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="96" fill="#1D4B3A">100%</text>
+  <text x="400" y="300" text-anchor="middle" font-size="20" fill="#251F1A" fill-opacity="0.7">scenario pass across 18 configs</text>
+  <g font-size="16" fill="#251F1A" text-anchor="middle">
+    <text x="200" y="370" font-weight="600">0</text>
+    <text x="200" y="392" fill-opacity="0.55">schema errors</text>
+    <text x="400" y="370" font-weight="600">0</text>
+    <text x="400" y="392" fill-opacity="0.55">exceptions</text>
+    <text x="600" y="370" font-weight="600">10 / 10</text>
+    <text x="600" y="392" fill-opacity="0.55">scenarios</text>
+  </g>
+  <text x="48" y="461" font-size="12.5" fill="#251F1A" fill-opacity="0.5">Counts, difficulty, scope, ask-when-vague, append-harder. Model and budget did not move any of this.</text>
+</svg>

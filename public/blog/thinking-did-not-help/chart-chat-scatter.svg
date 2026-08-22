@@ -1,0 +1,50 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="'Nunito', system-ui, sans-serif">
+  <rect x="0" y="0" width="800" height="500" rx="24" fill="#F7F4E3"/>
+  <text x="48" y="52" font-family="'Fraunces', Georgia, serif" font-size="30" fill="#251F1A">Chat: quality vs time-to-first-token</text>
+  <text x="48" y="76" font-size="15" fill="#251F1A" fill-opacity="0.55">Grounded research questions. TTFT includes the Researcher round-trip.</text>
+  <line x1="86" y1="400" x2="770" y2="400" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="332" x2="770" y2="332" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="264" x2="770" y2="264" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="196" x2="770" y2="196" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <line x1="86" y1="130" x2="770" y2="130" stroke="#251F1A" stroke-opacity="0.10" stroke-width="1"/>
+  <g font-size="12" fill="#251F1A" fill-opacity="0.45" text-anchor="end">
+    <text x="88" y="404">0.20</text>
+    <text x="88" y="336">0.36</text>
+    <text x="88" y="268">0.53</text>
+    <text x="88" y="200">0.69</text>
+    <text x="88" y="134">0.85</text>
+  </g>
+  <g font-size="12" fill="#251F1A" fill-opacity="0.45" text-anchor="middle">
+    <text x="196" y="428">15s</text>
+    <text x="356" y="428">20s</text>
+    <text x="516" y="428">25s</text>
+    <text x="676" y="428">30s</text>
+  </g>
+  <circle cx="260.0" cy="246.3" r="5" fill="#1D4B3A" stroke="#251F1A" stroke-width="2" opacity="0.92"><title>luna@off</title></circle>
+  <circle cx="240.8" cy="242.2" r="6" fill="#1D4B3A" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>luna@low</title></circle>
+  <circle cx="336.8" cy="316.9" r="7" fill="#1D4B3A" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>luna@medium</title></circle>
+  <circle cx="346.4" cy="329.4" r="8" fill="#1D4B3A" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>luna@high</title></circle>
+  <circle cx="394.4" cy="262.9" r="9" fill="#1D4B3A" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>luna@xhigh</title></circle>
+  <circle cx="618.4" cy="246.3" r="10" fill="#1D4B3A" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>luna@max</title></circle>
+  <circle cx="244.0" cy="292.0" r="5" fill="#251F1A" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>terra@off</title></circle>
+  <circle cx="199.2" cy="366.8" r="6" fill="#251F1A" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>terra@low</title></circle>
+  <circle cx="151.2" cy="300.3" r="7" fill="#251F1A" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>terra@medium</title></circle>
+  <circle cx="295.2" cy="171.5" r="8" fill="#251F1A" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>terra@high</title></circle>
+  <circle cx="279.2" cy="283.7" r="9" fill="#251F1A" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>terra@xhigh</title></circle>
+  <circle cx="330.4" cy="287.8" r="10" fill="#251F1A" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>terra@max</title></circle>
+  <circle cx="208.8" cy="279.5" r="5" fill="#FFBC14" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>sol@off</title></circle>
+  <circle cx="381.6" cy="196.5" r="6" fill="#FFBC14" stroke="#251F1A" stroke-width="2" opacity="0.92"><title>sol@low</title></circle>
+  <circle cx="333.6" cy="246.3" r="7" fill="#FFBC14" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>sol@medium</title></circle>
+  <circle cx="416.8" cy="292.0" r="8" fill="#FFBC14" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>sol@high</title></circle>
+  <circle cx="669.6" cy="316.9" r="9" fill="#FFBC14" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>sol@xhigh</title></circle>
+  <circle cx="541.6" cy="275.4" r="10" fill="#FFBC14" stroke="#F7F4E3" stroke-width="1.5" opacity="0.92"><title>sol@max</title></circle>
+  <text x="260" y="232.30769230769235" font-size="13" fill="#1D4B3A" font-weight="600">luna@off</text>
+  <text x="382" y="182.46153846153848" font-size="13" fill="#251F1A" font-weight="600">sol@low</text>
+  <g transform="translate(500,112)">
+    <circle cx="0" cy="0" r="5.5" fill="#1D4B3A"/><text x="14" y="4" font-size="13" fill="#251F1A">luna</text>
+    <circle cx="80" cy="0" r="5.5" fill="#251F1A"/><text x="94" y="4" font-size="13" fill="#251F1A">terra</text>
+    <circle cx="160" cy="0" r="5.5" fill="#FFBC14"/><text x="174" y="4" font-size="13" fill="#251F1A">sol</text>
+  </g>
+  <text x="400" y="448" text-anchor="middle" font-size="13" fill="#251F1A" fill-opacity="0.55">TTFT p50 (seconds) · bigger dot = more thinking</text>
+  <text x="48" y="461" font-size="12.5" fill="#251F1A" fill-opacity="0.5">Every config sits in a 15 to 20 second band until max. The Researcher, not the model, sets the floor.</text>
+</svg>

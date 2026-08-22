@@ -1,0 +1,14 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="'Nunito', system-ui, sans-serif">
+  <rect x="0" y="0" width="800" height="500" rx="24" fill="#F7F4E3"/>
+  <text x="48" y="52" font-family="'Fraunces', Georgia, serif" font-size="30" fill="#251F1A">21 of 24 judges picked fan-out</text>
+  <text x="48" y="76" font-size="15" fill="#251F1A" fill-opacity="0.55">Four specs, three judges, two reps. Two candidates per panel.</text>
+  <rect x="80" y="160" width="300" height="220" rx="16" fill="#251F1A" fill-opacity="0.08"/>
+  <text x="230" y="250" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="72" fill="#251F1A" fill-opacity="0.55">3</text>
+  <text x="230" y="290" text-anchor="middle" font-size="18" fill="#251F1A" fill-opacity="0.6">single pass</text>
+  <text x="230" y="318" text-anchor="middle" font-size="14" fill="#251F1A" fill-opacity="0.45">win rate 0.13</text>
+  <rect x="420" y="130" width="300" height="250" rx="16" fill="#FFBC14"/>
+  <text x="570" y="250" text-anchor="middle" font-family="'Fraunces', Georgia, serif" font-size="72" fill="#251F1A">21</text>
+  <text x="570" y="290" text-anchor="middle" font-size="18" fill="#251F1A">fan-out</text>
+  <text x="570" y="318" text-anchor="middle" font-size="14" fill="#251F1A" fill-opacity="0.7">win rate 0.88</text>
+  <text x="48" y="461" font-size="12.5" fill="#251F1A" fill-opacity="0.5">Per spec: pca3 5-1, pls-hd4 6-0, course5 6-0, mix3-quiz 4-2. The five-topic spec is a shutout. Single misses topics 4 and 5.</text>
+</svg>
