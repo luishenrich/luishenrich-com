@@ -114,7 +114,7 @@ export default function About() {
           Download PDF ↓
         </a>
         <p className="text-[13px] font-mono text-text-muted mt-2">
-          Last updated May 2026
+          Last updated October 2026
         </p>
       </section>
 
