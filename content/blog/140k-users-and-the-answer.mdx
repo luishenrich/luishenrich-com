@@ -1,0 +1,203 @@
+export const meta = {
+  title: "140,000 users, and the number that went back up",
+  date: "2026-10-23",
+  description:
+    "In August I wrote down a test in public: if signups and monthly actives were not climbing again by the end of October, it was not the season. The semester is running and the numbers are in.",
+};
+
+![140,000 registered. 32,079 active. It was the season, and then some · Luis Henrich-Bandis](/blog/140k-users-and-the-answer/hero.svg)
+
+In August I published [a post about a number going down](/blog/100k-users-and-the-mobile-app). Monthly active users had fallen three months running. The comfortable explanation was the summer, and I said so, and then I did not leave it there. I wrote the test down instead:
+
+> if signups and monthly actives are not climbing again by the end of October, with a full semester running, then this was not the season.
+
+It is October 23. The semester is running. Here is the answer.
+
+It was the season. Monthly actives are **32,079** on a rolling thirty days, against the 11,799 I reported in August. Registered users are at **140,340**. September was the biggest signup month in the product's history by a wide margin, and October is running ahead of September.
+
+So the comfortable explanation was right this time. I want to be careful about how much credit that earns me, because I have now been wrong twice and right once, and the right one is the one where I made no decision at all. I waited.
+
+I am 23, doing my Master's at RWTH Aachen, and I have been running this alone since January 2026.
+
+---
+
+## The number that went back up
+
+Monthly actives, same definition as every post before this one, which is unique people who open the app in a calendar month:
+
+| Month | Monthly active users |
+|---|---|
+| April 2026 | 11,799 |
+| May 2026 | 14,718 |
+| June 2026 | 13,111 |
+| July 2026 | 12,491 |
+| August 2026 | 15,590 |
+| September 2026 | 27,026 |
+
+![Monthly active users from December 2025 to October 2026, falling for three months and then roughly doubling in September](/blog/140k-users-and-the-answer/chart-mau.svg)
+
+September is **27,026**, which is roughly double July and well past the May peak I thought was the ceiling. October is incomplete, so the honest figure to use is the rolling thirty days to today: **32,079**.
+
+New registrations tell the same story and tell it louder:
+
+| Month | New registrations |
+|---|---|
+| May 2026 | 8,688 |
+| June 2026 | 8,024 |
+| July 2026 | 6,139 |
+| August 2026 | 7,970 |
+| September 2026 | 16,821 |
+| October 2026 (23 days) | 13,863 |
+
+September is 2.7 times July. And October is not slowing down: September averaged 561 signups a day, October is averaging 611.
+
+One correction while I am here, because this blog keeps turning out to be partly about measurement. The May, June and July figures in the table above are slightly higher than the ones I published in August. I printed 8,542, 7,926 and 6,037. The real numbers are 8,688, 8,024 and 6,139. Events arrived late and the past moved under me by one to two percent. The shape of the decline I wrote about was correct. The digits were not quite, and I would rather say that than quietly republish different ones.
+
+Daily actives across October run from **816 to 1,930**, averaging **1,386**. In August that range was 352 to 589, averaging 473.
+
+---
+
+## It was the season, but the season is not the whole story
+
+Here is the part I did not predict, and it is better than the part I did.
+
+Growth did not come back evenly. It came back from one country, through one page, because of one word.
+
+The largest organic entry point on the entire site is now `/use-cases/pdf-to-reviewer-ai`, at **13,264 sessions**, which is 14.6% of all organic traffic. In August it was fifth, at 5.6%. I went and looked at who was landing on it:
+
+| Country | Sessions on that page |
+|---|---|
+| Philippines | 13,221 |
+| United States | 285 |
+| India | 61 |
+
+95% of the traffic to the biggest page on my site is from the Philippines. "Reviewer" is what Filipino students call exam prep material. It is not a word I chose on purpose. It came out of an agent-drafted article in a content pipeline I built to cover a lot of search surface cheaply, and it happened to be the exact term a very large group of students actually types.
+
+That shows up in the app too. Here is where active users came from before and after:
+
+| Country | May to July | Aug to Oct |
+|---|---|---|
+| Philippines | 3,769 | 10,535 |
+| India | 10,133 | 9,020 |
+| United States | 5,383 | 7,819 |
+| Germany | 4,986 | 3,704 |
+
+The Philippines went from fourth to first and nearly tripled. India went down. Germany, my own country, went down.
+
+I did not do this. I do not have a Philippines strategy. I had a page, in English, about a thing students need, using a word I did not know was load-bearing. The honest lesson is that breadth found something my judgement would never have found, and I only know about it because I went looking at a table I had no particular reason to open.
+
+The rest of the acquisition picture is where it was. Since the last post, the marketing site did **108,510 sessions**, of which **90,768 were organic search** and **one** was paid. Not one percent. One session. Against the same window last year, organic went from 28,806 to 90,768, a little over three times over.
+
+Locales shifted in a way worth naming:
+
+| Locale | Organic sessions | Share |
+|---|---|---|
+| English | 72,166 | 79.5% |
+| Spanish | 9,325 | 10.3% |
+| German | 9,277 | 10.2% |
+
+Spanish has passed German. In August German was 14.8% and Spanish was 11.9%. Both are still doing the work of a channel I do not pay for.
+
+AI-engine traffic went from 493 sessions in this window last year to **2,685**, which is 2.5% of all sessions. ChatGPT is 854 of it, Gemini 234, Perplexity 71. It is growing fast and it is still not the business, which is exactly what I said in August and is still true.
+
+---
+
+## Mobile, as promised, in October
+
+In August I shipped the iPhone app two days before publishing and refused to put adoption numbers in the post, because two days is not a measurement. I said ask me in October.
+
+It is October. Mobile monthly actives:
+
+| Month | People using the app |
+|---|---|
+| August 2026 | 451 |
+| September 2026 | 1,544 |
+| October 2026 | 2,465 |
+
+That is real and it is small. Roughly 2,500 of 32,000 monthly actives are on a phone or tablet. Mobile did not cause the growth in this post. The timing makes that tempting to claim and the size of it makes the claim false.
+
+And one direct correction to the last post. I wrote, about Android:
+
+> There is not a single Android event in my analytics, ever, and no Android client has ever authenticated against the API.
+
+That is no longer true, because I shipped it. The first Android event lands in the week of August 16, about ten days after that sentence was published. Here is October by operating system:
+
+| OS | People |
+|---|---|
+| Android | 1,105 |
+| iOS | 904 |
+| iPadOS | 488 |
+
+Android is now the largest mobile platform I have. I spent a paragraph in the last post explaining that Android was planned and not shipped, and the reason it went out quickly afterwards is the reason I chose React Native in the first place: it was mostly the same app. That decision paid off in a way I had argued for in theory and had not yet actually collected.
+
+It also fits the geography. The countries that grew are not iPhone-first countries.
+
+---
+
+## The silent failures got fixed
+
+The worst number in the August post was not the decline. It was this: `error_page_shown` had fired 7,721 times for 2,275 different people, close to one in five monthly actives hitting an error screen, and almost none of them told me.
+
+| Month | Error pages shown | People affected |
+|---|---|---|
+| June 2026 | 3,616 | 994 |
+| July 2026 | 906 | 319 |
+| August 2026 | 629 | 198 |
+| September 2026 | 584 | 261 |
+| October 2026 | 284 | 173 |
+
+From 994 people a month to 173, while monthly actives went from 13,111 to over 32,000. As a share of actives that is 7.6% down to 0.5%.
+
+This is the one in this post I will take credit for. It is also the least interesting thing to write about, which is the point I keep relearning. The work was dull: find the error, fix the error, check the count next week. No decisions, no bets, no architecture. Just the thing I had been avoiding because shipping felt better.
+
+The two-hour rule from the last two posts is what made room for it. **If a feature needs more than two hours of maintenance a month, it gets cut.** I did not add much in August and September. That is why there was time.
+
+---
+
+## What 140,000 registered users actually means
+
+Same honesty as last time, because the headline still flatters me.
+
+140,340 is every account ever created. About 32,000 were active in the last thirty days. That is **22.9%**, so roughly one in four registered users is active in a given month.
+
+In August that ratio was 11.5%. It has doubled. The gap between registered and active is still the real story of this business, and it is the first time it has narrowed instead of widened.
+
+Two caveats on the big number, because the last post made a point of them and nothing has changed.
+
+The registered figure is derived rather than read. My database said 102,620 on August 7, and I counted 37,720 signup events since, which gives 140,340. I did not query the production database directly for this post, so this is the analytics-plus-anchor version and it could be off by a small amount in either direction. The event stream has known gaps before October 2025, which is why I anchor to a database number instead of summing from the beginning.
+
+And it still depends on how you count. Every account gives 140,340. Excluding internal accounts and people on manually granted free access gives a smaller number, as it did in August. I am using every account, for the same reason as before, and saying so rather than picking the flattering definition quietly.
+
+---
+
+## What is still unsolved, and now I have a number for it
+
+Cross-semester retention. I have called it unsolved in three posts now. This time I measured it.
+
+Of the 14,718 people who were active in May, **153 came back** in September or later. That is **1.0%**.
+
+Using a stricter cohort, people who did not just open the app in May but actually made something with it, 86 of 4,731 came back. That is 1.8%.
+
+One caveat that matters, and it cuts in my favour, so I want to be precise about it. I am matching people across five months by their analytics identity. Someone who cleared cookies, switched laptops or came back on the phone app counts as a new person, so the true figure is higher than 1% and I cannot tell you by how much. The number is a floor, not an estimate.
+
+Even generously, it is terrible, and it reframes everything above it. The growth in this post is not my old users returning for a new semester. It is almost entirely new people. September did not bring May back. September brought September.
+
+Which means the thing I have been calling a seasonal recovery is better described as a seasonal re-acquisition. The product is very good at being found and not yet good at being remembered. The June rewrite moved week-one retention, which I wrote about [here](/blog/did-the-bet-work), and it did not touch the five-month version of the problem at all.
+
+That is the next thing. Not more pages, not another platform. A reason to open this in February.
+
+---
+
+## What I am taking from this one
+
+Three things, and the order matters.
+
+**The test was worth writing down.** Not because I was right. Because in August I could not tell the difference between a seasonal dip and a product failure, and the only honest move was to name the date and the number in public and then wait. That cost nothing and it settled a question I would otherwise still be arguing with myself about.
+
+**Breadth beat judgement.** The single biggest driver of this quarter is a word I did not know mattered, on a page I did not write, aimed at a country I was not thinking about. My instincts had nothing to do with it. What did the work was publishing a lot of pages cheaply in several languages, and then reading the tables.
+
+**The dull work paid the most.** Error pages down 83% is the only line in this post that was clearly caused by me, and it came from maintenance, not from building.
+
+Next one when the semester ends, which is when I find out whether February exists.
+
+If you are building in applied AI, solo or close to it, I would like to hear from you. Find me at [studypdf.net](https://studypdf.net), [luishenrich.com](https://luishenrich.com), or [@luisnhenrich](https://x.com/luisnhenrich) on X.

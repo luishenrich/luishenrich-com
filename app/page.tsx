@@ -83,7 +83,7 @@ export default async function Home() {
           >
             StudyPDF
           </a>{" "}
-          solo at 100,000+ users across 200+ universities.
+          solo at 140,000+ users.
         </p>
         <p className="text-text-secondary mt-8">
           I write here when something&rsquo;s actually worth writing about.

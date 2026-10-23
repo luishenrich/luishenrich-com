@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Luis Henrich-Bandis. 23, founder. Building Lagias, and running StudyPDF at 100,000+ users."
+    "Luis Henrich-Bandis. 23, founder. Building Lagias, and running StudyPDF at 140,000+ users."
 };
 
 export default function About() {
@@ -43,9 +43,9 @@ export default function About() {
         <p className="text-text-secondary mb-7">
           We started it in summer 2024. A friend, his exam prep, and ChatGPT
           failing at PDFs in spectacularly stupid ways. I built the first
-          version in three weeks. Two years later it&rsquo;s at 100,000+ users
-          across 200+ universities, around 600 daily actives, 150k+
-          documents processed, and I run it solo from Cologne. I do all of it:
+          version in three weeks. Two years later it&rsquo;s at 140,000+ users,
+          around 1,300 daily actives, 350k+ documents processed, and I run it
+          solo from Cologne. I do all of it:
           the AI pipeline, the infra, the support emails, the SEO posts, the
           late-night bug that turned out to be a vector store leaking across
           users while I was on holiday in Madeira. Obviously not everything
@@ -59,7 +59,7 @@ export default function About() {
           chat layer) is generated against that same tree. Cost goes down,
           quality goes up. I wrote the long version{" "}
           <Link
-            href="/blog/85k-users-solo"
+            href="/blog/140k-users-and-the-answer"
             className="text-text-primary border-b border-border hover:border-accent transition-colors"
           >
             here

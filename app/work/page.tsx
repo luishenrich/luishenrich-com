@@ -5,15 +5,14 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "What I've built. StudyPDF, an AI study platform with 100,000+ users running solo.",
+    "What I've built. StudyPDF, an AI study platform with 140,000+ users running solo.",
 };
 
 const numbers = [
-  { value: "100,000+", label: "Registered users" },
-  { value: "200+", label: "Universities" },
-  { value: "150k+", label: "Documents processed" },
-  { value: "99%", label: "Organic growth" },
-  { value: "600+", label: "Daily active users" },
+  { value: "140,000+", label: "Registered users" },
+  { value: "32,000+", label: "Monthly active users" },
+  { value: "1,300+", label: "Daily active users" },
+  { value: "350k+", label: "Documents processed" },
   { value: "1", label: "Engineer" },
 ];
 

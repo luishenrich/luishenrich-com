@@ -39,7 +39,7 @@ const slides = [
   },
   {
     src: "/deck/slides/slide-06.webp",
-    alt: "Traction: 92,000 students as a team of one. Growth is 99 percent organic, daily actives up six times in five months, a 56 percent product-market-fit score, one founder with AI agents as the team.",
+    alt: "Traction: 140,000 students as a team of one. Growth is 99 percent organic, daily actives up six times in five months, a 56 percent product-market-fit score, one founder with AI agents as the team.",
   },
   {
     src: "/deck/slides/slide-08.webp",
@@ -51,7 +51,7 @@ const slides = [
   },
   {
     src: "/deck/slides/slide-10.webp",
-    alt: "Founder: Luis Henrich-Bandis. Built StudyPDF to 92,000 users solo with AI agents as the team. AI engineer at BMW, Industrial Engineering at RWTH Aachen, CS50 from Harvard.",
+    alt: "Founder: Luis Henrich-Bandis. Built StudyPDF to 140,000 users solo with AI agents as the team. AI engineer at BMW, Industrial Engineering at RWTH Aachen, CS50 from Harvard.",
   },
   {
     src: "/deck/slides/slide-11.webp",

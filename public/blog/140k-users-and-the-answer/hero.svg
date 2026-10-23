@@ -1,0 +1,13 @@
+<svg viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" font-family="'Nunito', system-ui, sans-serif">
+  <rect x="0" y="0" width="1920" height="1080" rx="24" fill="#F7F4E3"/>
+  <text x="120" y="300" font-family="'Fraunces', Georgia, serif" font-size="28" fill="#251F1A" fill-opacity="0.45">luishenrich.com</text>
+  <text x="120" y="430" font-family="'Fraunces', Georgia, serif" font-size="78" fill="#251F1A">In August the number</text>
+  <text x="120" y="530" font-family="'Fraunces', Georgia, serif" font-size="78" fill="#251F1A">was going down.</text>
+  <rect x="120" y="580" width="900" height="96" rx="8" fill="#FFBC14"/>
+  <text x="140" y="648" font-family="'Fraunces', Georgia, serif" font-size="72" font-style="italic" fill="#251F1A">It went back up.</text>
+
+  <text x="120" y="790" font-size="30" fill="#251F1A" fill-opacity="0.55">140,340 registered · 32,079 monthly active · 1 paid session</text>
+  <text x="120" y="840" font-size="30" fill="#251F1A" fill-opacity="0.55">Cross-semester retention: 1%</text>
+
+  <text x="1800" y="1000" font-size="22" fill="#251F1A" fill-opacity="0.4" text-anchor="end">October 2026 · luishenrich.com</text>
+</svg>
