@@ -25,11 +25,18 @@ const personJsonLd = {
       url: "https://studypdf.net",
     },
   ],
-  alumniOf: {
-    "@type": "EducationalOrganization",
-    name: "RWTH Aachen University",
-    url: "https://www.rwth-aachen.de/",
-  },
+  alumniOf: [
+    {
+      "@type": "EducationalOrganization",
+      name: "Imperial College London",
+      url: "https://www.imperial.ac.uk/",
+    },
+    {
+      "@type": "EducationalOrganization",
+      name: "RWTH Aachen University",
+      url: "https://www.rwth-aachen.de/",
+    },
+  ],
   sameAs: [
     "https://www.linkedin.com/in/luishenrich/",
     "https://x.com/luisnhenrich",
@@ -65,7 +72,7 @@ export default async function Home() {
           </h1>
         </div>
         <p className="text-text-secondary">
-          I&rsquo;m Luis. 23, founder, based in Cologne. I&rsquo;m building{" "}
+          I&rsquo;m Luis. 23, founder, based in London. I&rsquo;m building{" "}
           <a
             href="https://lagias.com"
             target="_blank"

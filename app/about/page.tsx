@@ -24,7 +24,7 @@ export default function About() {
           Luis Henrich-Bandis
         </h1>
         <p className="text-[13px] font-mono text-text-muted mb-7">
-          23 · Cologne · Master&rsquo;s at RWTH Aachen
+          23 · London · MSc at Imperial College London
         </p>
 
         <p className="text-text-secondary mb-7">
@@ -45,7 +45,7 @@ export default function About() {
           failing at PDFs in spectacularly stupid ways. I built the first
           version in three weeks. Two years later it&rsquo;s at 140,000+ users,
           around 1,300 daily actives, 350k+ documents processed, and I run it
-          solo from Cologne. I do all of it:
+          solo from London. I do all of it:
           the AI pipeline, the infra, the support emails, the SEO posts, the
           late-night bug that turned out to be a vector store leaking across
           users while I was on holiday in Madeira. Obviously not everything
