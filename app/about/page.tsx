@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Luis Henrich-Bandis. 23, founder. Building Lagias, and running StudyPDF at 140,000+ users."
+    "Luis Henrich-Bandis. 23, founder. Running StudyPDF at 140,000+ users."
 };
 
 export default function About() {
@@ -81,23 +81,23 @@ export default function About() {
           Currently
         </h2>
         <p className="text-text-secondary mb-4">
-          Building{" "}
+          Running{" "}
           <a
-            href="https://lagias.com"
+            href="https://studypdf.net"
             target="_blank"
             rel="noopener noreferrer"
             className="text-text-primary border-b border-border hover:border-accent transition-colors"
           >
-            Lagias
+            StudyPDF
           </a>{" "}
-          with Luca Wuerker. You describe an investment idea in plain English,
-          agents research it and write the backtest, and then a deterministic
-          harness with no AI anywhere in it grades the result on data the model
-          never saw. The AI proposes. The harness decides. Waitlist is open,
-          alpha invites start this month.
+          solo, now past 140,000 registered users. The iPhone, iPad and Android
+          apps all shipped this autumn, and Android turned out to be the
+          biggest of the three.
         </p>
         <p className="text-text-secondary">
-          Still running StudyPDF alongside it.
+          The part I am actually working on is the one I have not solved.
+          Students come for one exam and leave when it is over. I want a reason
+          for them to open it again in February.
         </p>
       </section>
 

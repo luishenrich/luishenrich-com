@@ -13,18 +13,11 @@ const personJsonLd = {
   url: "https://luishenrich.com",
   email: "hi@luishenrich.com",
   jobTitle: "Founder",
-  worksFor: [
-    {
-      "@type": "Organization",
-      name: "Lagias",
-      url: "https://lagias.com",
-    },
-    {
-      "@type": "Organization",
-      name: "StudyPDF",
-      url: "https://studypdf.net",
-    },
-  ],
+  worksFor: {
+    "@type": "Organization",
+    name: "StudyPDF",
+    url: "https://studypdf.net",
+  },
   alumniOf: [
     {
       "@type": "EducationalOrganization",
@@ -72,16 +65,7 @@ export default async function Home() {
           </h1>
         </div>
         <p className="text-text-secondary">
-          I&rsquo;m Luis. 23, founder, based in London. I&rsquo;m building{" "}
-          <a
-            href="https://lagias.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-text-primary border-b border-border hover:border-accent transition-colors"
-          >
-            Lagias
-          </a>
-          , a quant research harness for retail traders, and I run{" "}
+          I&rsquo;m Luis. 23, founder, based in London. I run{" "}
           <a
             href="https://studypdf.net"
             target="_blank"
